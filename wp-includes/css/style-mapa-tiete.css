@@ -1,0 +1,57 @@
+ div.topo {
+	display:inline-block;
+	padding: 0;
+    margin-left: 0px;	
+	margin-top: 0px;
+	float:left;
+}
+div.topcontainer {
+	background-color:#E00815;
+	display:inline-block;
+	width:100%;
+	min-height: 35px;
+	margin-bottom: 0;
+}
+
+div.perimetercontainer {
+	background-color:#FFFFFF;
+	display:inline-block;
+	width:80%;
+	height:80px;
+	margin-bottom: 0;
+}
+
+div.perimeterinfo {
+	width: 100%;
+	padding-top: 1.5em;
+	padding-left: 0.1em;
+	display: inline-block;
+}
+
+div.perimeterinfo > p {	
+	text-align:justify;
+	font-family: sans-serif;	
+	font-size: 12px;
+	color: #808080;
+}
+
+div#map {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+}
+
+div#infoContainer {
+	position: fixed;
+    display: block;
+    width: 180px;
+    left: 800px;
+    top: 20;
+    background-color: white;
+    padding: 5px;
+    height: 200px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    /*border: 2px solid cyan;*/
+    overflow-y: scroll;
+}
