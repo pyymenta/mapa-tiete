@@ -8,7 +8,6 @@
 	<SimpleField name="Linetype" type="string"></SimpleField>
 	<SimpleField name="EntityHandle" type="string"></SimpleField>
 	<SimpleField name="Text" type="string"></SimpleField>
-	<SimpleField name="Type_Feature" type="string"></SimpleField>
 </Schema>
 <Folder><name>2A</name>
   <Placemark>
@@ -16,7 +15,7 @@
 	<ExtendedData><SchemaData schemaUrl="#2A">
 		<SimpleData name="Layer">AMB_LAP_CORDAO DRENANTE_PL</SimpleData>
 		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
-		<SimpleData name="Type_Feature">2A</SimpleData><SimpleData name="EntityHandle">146</SimpleData>
+		<SimpleData name="EntityHandle">146</SimpleData>
 	</SchemaData></ExtendedData>
       <LineString><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.705098020508835,-23.51690566786921 -46.703639112957738,-23.513978297682787 -46.703040479322958,-23.512820904352086</coordinates></LineString>
   </Placemark>

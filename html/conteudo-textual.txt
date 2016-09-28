@@ -1,0 +1,239 @@
+﻿1A
+Título: Destamponamento de córrego 
+Texto: O destamponamento é uma solução adotada para os córregos limpos a fim de aumentar a sua capacidade de vazão e melhorar a drenagem superficial urbana. Além disso, a abertura dos córregos promove o contato dos corpos d´água com a atmosfera e colabora para o ressurgimento da vida aquática e ciliar;
+
+_
+
+1B
+Título: Qualificação de córregos abertos
+Texto: O destamponamento é uma solução adotada para os córregos limpos a fim de aumentar a sua capacidade de vazão e melhorar a drenagem superficial urbana. Além disso, a abertura dos córregos promove o contato dos corpos d´água com a atmosfera e colabora para o ressurgimento da vida aquática e ciliar;
+
+_
+
+2A
+Título: Implantar eixos drenantes
+Texto: Criar grandes cordões de infiltração das águas pluviais em locais estratégicos, transversais ao sentido do escoamento superficial das bacias de drenagem, colaborando para impedir que as águas atinjam os pontos mais baixos da várzea;
+
+_
+
+2B
+Título: Canteiros drenantes
+Texto: Criar grandes cordões de infiltração das águas pluviais em locais estratégicos, transversais ao sentido do escoamento superficial das bacias de drenagem, colaborando para impedir que as águas atinjam os pontos mais baixos da várzea. 
+
+
+_
+
+3A
+Título: Praças secas rebaixadas
+Texto: Orientar o escoamento das águas pluviais em direção a grandes áreas projetadas para receber, reter e retardar a descida de grandes volumes d´água;
+
+_
+
+3B
+Título: Praças de absorção
+Texto: Orientar o escoamento das águas pluviais em direção a grandes áreas projetadas para receber, reter e retardar a descida de grandes volumes d´água;
+
+
+_ 
+
+3C
+Título: Alças de pontes
+Texto: Orientar o escoamento das águas pluviais em direção a grandes áreas projetadas para receber, reter e retardar a descida de grandes volumes d´água;
+
+
+_
+
+4A
+Título: Parques lineares
+Texto: Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.
+A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;
+
+
+_
+
+4B
+Título: Outros parques
+Texto: Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.
+A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;
+
+
+_
+
+5A
+Título: Requalificação de praças existentes
+Texto: Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.
+A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;
+
+_
+
+5B
+Título: Praças oriundas de destinação obrigatória
+Texto: Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.
+A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;
+
+_
+
+5C
+Título: Praças sobre túneis
+Texto: Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.
+A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;
+
+_
+
+5D
+Título: Praças sob viadutos
+Texto: Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.
+A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;
+
+_
+
+5E
+Título: Outras praças
+Texto: Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.
+A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;
+
+_
+
+6A
+Título: Alamedas
+Texto: Criar um sistema ambiental em rede aumenta a conectividade entre áreas verdes, proporcionando percursos sombreados aos usuários e caminhos ecológicos para a fauna;
+
+_
+
+6B
+Título: Bulevares
+Texto: Criar um sistema ambiental em rede aumenta a conectividade entre áreas verdes, proporcionando percursos sombreados aos usuários e caminhos ecológicos para a fauna;
+
+_
+
+7A
+Título: Abertura de novo viário
+Texto: A implantação de bulevares que interligam os bairros e priorizam o transporte público e alamedas de conexões locais com ciclovias e amplas calçadas irá promover a integração;
+
+_
+
+7B
+Título: Alargamento de viário existente
+Texto: A implantação de bulevares que interligam os bairros e priorizam o transporte público e alamedas de conexões locais com ciclovias e amplas calçadas irá promover a integração;
+
+_
+
+7C
+Título: Requalificação de viário existente
+Texto: A implantação de bulevares que interligam os bairros e priorizam o transporte público e alamedas de conexões locais com ciclovias e amplas calçadas irá promover a integração;
+
+_
+
+8A
+Título: Ampliação e melhoria de passeios existentes
+Texto: A requalificação dos passeios por meio do redesenho de sua geometria, seja ampliando-o em detrimento do leito carroçável, seja diminuindo curvaturas para reduzir a velocidade dos automóveis incentivarão a locomoção peatonal pelo território. A acessibilidade deve ser garantida em ponto estratégicos  com a criação de amplos passeios que vencem os desníveis;
+
+_
+
+8B
+Título: Acesso - rampas e escadarias
+Texto: A requalificação dos passeios por meio do redesenho de sua geometria, seja ampliando-o em detrimento do leito carroçável, seja diminuindo curvaturas para reduzir a velocidade dos automóveis incentivarão a locomoção peatonal pelo território. A acessibilidade deve ser garantida em ponto estratégicos  com a criação de amplos passeios que vencem os desníveis;
+
+_
+
+9A
+Título: Ciclopassarelas sobre ferrovia
+Texto: Novas travessias associadas a equipamentos, espaços públicos ou estações de trem e metrô, que priorizam deslocamentos a pé e de bicicleta garantem a conexão entre bairros e o acesso a trabalho, serviços e equipamentos públicos;
+
+_
+
+9B
+Título: Ciclopassarela sob ferrovia
+Texto: Novas travessias associadas a equipamentos, espaços públicos ou estações de trem e metrô, que priorizam deslocamentos a pé e de bicicleta garantem a conexão entre bairros e o acesso a trabalho, serviços e equipamentos públicos;
+
+_
+
+9C
+Título: Ciclopassarela sobre rios ou córregos
+Texto: Novas travessias associadas a equipamentos, espaços públicos ou estações de trem e metrô, que priorizam deslocamentos a pé e de bicicleta garantem a conexão entre bairros e o acesso a trabalho, serviços e equipamentos públicos;
+
+_
+
+10A
+Título: Equipamentos em terrenos públicos subutilizados
+Texto: A implantação de novos equipamentos, além de suprir as necessidades da população, qualifica a vida nos bairros;
+
+
+_
+
+10B
+Título: Equipamentos em galpões reformados
+Texto: A implantação de novos equipamentos, além de suprir as necessidades da população, qualifica a vida nos bairros;
+
+_
+
+10C
+Título: Equipamentos em áreas indicadas de parcelamento e grandes lotes
+Texto: A implantação de novos equipamentos, além de suprir as necessidades da população, qualifica a vida nos bairros;
+
+_
+
+11A
+Título: Infraestrutura de TI e incentivo ao setor de negócios
+Texto: Manter e potencializar unidades produtivas, incentivar a implantação de novas atividades produtivas, desenvolver o setor logístico, proteger territórios produtivos da incorporação residencial vertical e modernizar e integrar o entorno das unidades de atacado/varejo;
+
+_
+
+11B
+Título: Permanência de usos produtivos
+Texto: Manter e potencializar unidades produtivas, incentivar a implantação de novas atividades produtivas, desenvolver o setor logístico, proteger territórios produtivos da incorporação residencial vertical e modernizar e integrar o entorno das unidades de atacado/varejo;
+
+_
+
+11C
+Título: Incentivo ao setor logístico
+Texto: Manter e potencializar unidades produtivas, incentivar a implantação de novas atividades produtivas, desenvolver o setor logístico, proteger territórios produtivos da incorporação residencial vertical e modernizar e integrar o entorno das unidades de atacado/varejo;
+
+_
+
+11D
+Título: Incentivo ao parcelamento de grandes centros de compras com manutenção de uso
+Texto: Manter e potencializar unidades produtivas, incentivar a implantação de novas atividades produtivas, desenvolver o setor logístico, proteger territórios produtivos da incorporação residencial vertical e modernizar e integrar o entorno das unidades de atacado/varejo;
+
+_
+
+12A
+Título: Fruição pública
+Texto: Implantar Conjuntos de Habitação Social de dimensões menores e mais espalhados pelo território, contemplando fachadas ativas, faixas de fruição pública, mix de rendas e espaços públicos de qualidade, procurando ao máximo relacionar os conjuntos com o espaço urbano à sua volta;
+
+_
+
+12B
+Título: Pequenas praças como espaços de socialização
+Texto: Implantar Conjuntos de Habitação Social de dimensões menores e mais espalhados pelo território, contemplando fachadas ativas, faixas de fruição pública, mix de rendas e espaços públicos de qualidade, procurando ao máximo relacionar os conjuntos com o espaço urbano à sua volta;
+
+_
+
+12C
+Título: Divisões condominiais com poucas unidades habitacionais e divididos por faixa de atendimento
+Texto: Implantar Conjuntos de Habitação Social de dimensões menores e mais espalhados pelo território, contemplando fachadas ativas, faixas de fruição pública, mix de rendas e espaços públicos de qualidade, procurando ao máximo relacionar os conjuntos com o espaço urbano à sua volta;
+
+_
+
+12D
+Título: Fachada ativa
+Texto: Implantar Conjuntos de Habitação Social de dimensões menores e mais espalhados pelo território, contemplando fachadas ativas, faixas de fruição pública, mix de rendas e espaços públicos de qualidade, procurando ao máximo relacionar os conjuntos com o espaço urbano à sua volta;
+
+_
+
+12E
+Título: Demarcação de áreas para habitação em terrenos menores, distribuídos pelo território
+Texto: Implantar Conjuntos de Habitação Social de dimensões menores e mais espalhados pelo território, contemplando fachadas ativas, faixas de fruição pública, mix de rendas e espaços públicos de qualidade, procurando ao máximo relacionar os conjuntos com o espaço urbano à sua volta;
+
+_
+
+12F
+Título: Taxas de ocupação mais altas em áreas próximas às áreas verdes
+Texto: Implantar Conjuntos de Habitação Social de dimensões menores e mais espalhados pelo território, contemplando fachadas ativas, faixas de fruição pública, mix de rendas e espaços públicos de qualidade, procurando ao máximo relacionar os conjuntos com o espaço urbano à sua volta;
+
+_
+
+12G
+Título: Maiores áreascondominiais verdes em regiões com pouca oferta de áreas verdes
+Texto: Implantar Conjuntos de Habitação Social de dimensões menores e mais espalhados pelo território, contemplando fachadas ativas, faixas de fruição pública, mix de rendas e espaços públicos de qualidade, procurando ao máximo relacionar os conjuntos com o espaço urbano à sua volta;
+
