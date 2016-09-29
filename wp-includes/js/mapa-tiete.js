@@ -157,13 +157,19 @@ const information = {
   }
 }
 var cLayer;
-var spCoords = [-5191207.638373509, -2698731.105121977];
-var extent = [-5191207.638373509, -2698731.105121977, -5183207.638373509, -2695731.105121977];
-var projection = new ol.proj.Projection({
-  code: 'xkcd-image',
-  units: 'pixels',
-  extent: extent
-});
+var spCoords = [-5199000, -2695000];
+// var oldExtent = [-5191207.638373509, -2698731.105121977, -5183207.638373509, -2695731.105121977];
+
+// Working
+var extent = [-5204950,-2698891,-5181999,-2690035];
+var mapImageLayer = new ol.layer.Image({
+      source: new ol.source.ImageStatic({
+        url: '../wp-includes/img/background.png',        
+        imageExtent: extent,
+        projection: 'EPSG:3857'
+      })
+    });
+
 var defaultImg = 'http://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2014/08/arco_tiete.jpg';
 
 function readProp(obj, prop) {
@@ -186,16 +192,7 @@ jQuery(document).ready(function() {
   jQuery('#propostaImagem').html("<img src='"+defaultImg+"' alt='Arco Tietê' />");
   
   /// Adiciona camadas ao array mapLayers
-  var mapLayers = [
-    new ol.layer.Tile({source: new ol.source.OSM()}),
-    new ol.layer.Image({
-      source: new ol.source.ImageStatic({
-        url: '../wp-includes/img/background.png',
-        projection: projection,
-        imageExtent: extent
-      })
-    })
-  ];
+  var mapLayers = [new ol.layer.Tile({source: new ol.source.OSM()})];
 
   var kmlUrls = [];
   for (codigo in information){kmlUrls.push(codigo.split('_')[1]+'.kml');}
@@ -205,15 +202,13 @@ jQuery(document).ready(function() {
     var nome = '_'+kmlUrls[i].split('.')[0];    
     var camada = platMapAPI.createCustomVectorLayerFromKML("../kmls/"+kmlUrls[i], lStyle);
     camada.set("name",nome); 
-    // camada.setZIndex(2);
     mapLayers.push(camada);
   }
 
   var view = new ol.View({
-    // center: spCoords,
-    center: ol.extent.getCenter(extent),
-    zoom: 11,
-    // minZoom: 10,
+    center: spCoords,
+    zoom: 12,
+    minZoom: 12,
     maxZoom: 30
   });
 
@@ -254,8 +249,7 @@ jQuery(document).ready(function() {
       if (feature) {
         featureOverlay.getSource().addFeature(feature);
       }
-      highlight = feature;
-      // console.log(featureOverlay.getZIndex());
+      highlight = feature;      
     }    
   };
   
@@ -275,7 +269,6 @@ jQuery(document).ready(function() {
       jQuery('#propostaTitulo').html(proposta.titulo);      
       jQuery('#propostaImagem').html(imgUrl);
       jQuery('#propostaTexto').html(proposta.texto);
-      console.log(layer);      
     } else {
       jQuery('#propostaTitulo').html('Clique no perímetro desejado para obter mais informações.');      
       jQuery('#propostaImagem').html('<img src="'+defaultImg+'" />');
@@ -283,7 +276,7 @@ jQuery(document).ready(function() {
       jQuery('#propostaTexto').html('');
     }
   };
-
+bugMap = map;
   map.on('click', function (evt) {
     getFeatureLayerInfo(evt.pixel);    
   });

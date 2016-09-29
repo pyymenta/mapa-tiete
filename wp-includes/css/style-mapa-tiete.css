@@ -37,7 +37,7 @@ div.perimeterinfo > p {
 
 div#mapa {
 	width: 100%;
-	height: 600px;
+	height: 500px;
 	float: left;
 }
 
@@ -45,7 +45,7 @@ div#infoContainer {
 	position: absolute;
 	float: left;
     width: 25%;
-    height: 600px;
+    height: 500px;
     background-color: white;
     padding: 20px;
     padding-top: 10px;
