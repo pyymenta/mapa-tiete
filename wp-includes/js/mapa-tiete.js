@@ -1,28 +1,7 @@
+/// DEBUG
+var bugMap;
+
 //JSON com Informações de cada categoria
-/*const information = {
-  '_1A': {
-    'titulo': 'Destamponamento de córrego',
-    'texto': 'O destamponamento é uma solução adotada para os córregos limpos' +
-              ' a fim de aumentar a sua capacidade de vazão' +
-              ' e melhorar a drenagem superficial urbana. Além disso, ' +
-              'a abertura dos córregos promove o contato dos corpos d´água com a' +
-              ' atmosfera e colabora para o ressurgimento da vida aquática e ciliar;',
-    'img': '../img/1A.png'
-  },
-  '_2A': {
-    'titulo': 'Implantar eixos drenantes',
-    'texto': 'Criar grandes cordões de infiltração das águas pluviais em locais estratégicos, ' +
-              'transversais ao sentido do escoamento superficial das bacias de drenagem, ' +
-              'colaborando para impedir que as águas atinjam os pontos mais baixos da várzea;',
-    'img': '../img/2A.png'
-  },
-  '_3A': {
-    'titulo': 'Praças secas rebaixadas',
-    'texto': 'Orientar o escoamento das águas pluviais em direção a grandes áreas projetadas para receber,' +
-              ' reter e retardar a descida de grandes volumes d´água;',
-    'img': '../img/3A.png'
-  }
-};*/
 const information = {
   '_1A': {
   'titulo': 'Destamponamento de córrego ',
@@ -190,6 +169,18 @@ var defaultImg = 'http://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/20
 function readProp(obj, prop) {
     return obj[prop];
 }
+var strokeLineDash = [0];
+
+var lStyle = new ol.style.Style({
+          stroke: new ol.style.Stroke({
+            color: 'rgba(80,120,200,0.8)',
+            width: 2,
+            lineDash: strokeLineDash
+          }),
+          fill: new ol.style.Fill({
+            color: 'rgba(120,180,255,0.5)'
+          })
+        });
 
 jQuery(document).ready(function() {
   jQuery('#propostaImagem').html("<img src='"+defaultImg+"' alt='Arco Tietê' />");
@@ -200,35 +191,23 @@ jQuery(document).ready(function() {
     new ol.layer.Image({
       source: new ol.source.ImageStatic({
         url: '../wp-includes/img/background.png',
-        //url: 'background-transp.png',
         projection: projection,
         imageExtent: extent
       })
     })
   ];
 
-  /*var kmlUrls = [
-      '1A.kml',
-      '1B.kml',
-      '2A.kml',
-      '3A.kml',
-      '3B.kml',
-      '3C.kml',
-      '4A.kml',
-      '4B.kml',
-      '5A.kml'
-    ];*/
-    var kmlUrls = [];
-    for (codigo in information){
-      // var fileName = ;
-      kmlUrls.push(codigo.split('_')[1]+'.kml');
-    }
-    for (var i = 0; i < kmlUrls.length; i++) {
-      var nome = '_'+kmlUrls[i].split('.')[0];    
-      var camada = platMapAPI.createVectorLayerFromKML("../kmls/"+kmlUrls[i]);        
-      camada.set("name",nome);
-      mapLayers.push(camada);
-    }
+  var kmlUrls = [];
+  for (codigo in information){kmlUrls.push(codigo.split('_')[1]+'.kml');}
+  
+  // for (var i = 0; i < kmlUrls.length; i++) {
+  for (var i = kmlUrls.length-1; i >= 0; i--) {
+    var nome = '_'+kmlUrls[i].split('.')[0];    
+    var camada = platMapAPI.createCustomVectorLayerFromKML("../kmls/"+kmlUrls[i], lStyle);
+    camada.set("name",nome); 
+    // camada.setZIndex(2);
+    mapLayers.push(camada);
+  }
 
   var view = new ol.View({
     // center: spCoords,
@@ -249,29 +228,25 @@ jQuery(document).ready(function() {
     map: map,
     style: new ol.style.Style({
       stroke: new ol.style.Stroke({
-        color: '#fdd',
-        width: 3
+        color: '#FFFFFF',
+        width: 3,
+        lineDash: strokeLineDash
       }),
       fill: new ol.style.Fill({
-        color: 'rgba(255,0,0,0.1)'
+        color: 'rgba(255,255,255,0.5)'
       })
     })
   });
 
+  // featureOverlay.setZIndex(1);
+
   var highlight;
   var displayFeatureInfo = function (pixel) {
     var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
-      return feature;
+      if(feature !== highlight)
+        return feature;
     });
-
     var info = document.getElementById('info');
-    /*if (feature) {
-      // info.innerHTML = feature.getId() + ': ' + feature.get('name');
-      info.innerHTML = feature.getProperties();
-    } else {
-      info.innerHTML = '&nbsp;';
-    }*/
-
     if (feature !== highlight) {
       if (highlight) {
         featureOverlay.getSource().removeFeature(highlight);
@@ -280,8 +255,8 @@ jQuery(document).ready(function() {
         featureOverlay.getSource().addFeature(feature);
       }
       highlight = feature;
-    }
-
+      // console.log(featureOverlay.getZIndex());
+    }    
   };
   
   var getFeatureLayerInfo = function (pixel) {
@@ -290,61 +265,36 @@ jQuery(document).ready(function() {
         return layer;
       }      
     });
-
     var feature = map.forEachFeatureAtPixel(pixel, function(feature){
       return feature;
     });
-
-    if (feature) {
-      // info.innerHTML = feature.getId() + ': ' + feature.get('name');
-      console.log(cLayer);
+    if (feature) {      
       var layer = cLayer.get('name');
       var proposta = readProp(information, layer);      
       var imgUrl = "<img src='../wp-includes/img/"+layer.split('_')[1]+".png' onerror=\"this.src='"+defaultImg+"'\" alt='"+proposta.titulo+"' />";
       jQuery('#propostaTitulo').html(proposta.titulo);      
       jQuery('#propostaImagem').html(imgUrl);
       jQuery('#propostaTexto').html(proposta.texto);
-      /*switch (layer) {
-        case '_1A':
-          console.log(information);
-          break;
-        default:          
-          info.innerHTML = information;
-          break;
-      }*/
-
-      // console.log("Informacoes: ",information);
-      // abrirModal();
+      console.log(layer);      
     } else {
-      info.innerHTML = '&nbsp;';
-      // fecharModal();
+      jQuery('#propostaTitulo').html('Clique no perímetro desejado para obter mais informações.');      
+      jQuery('#propostaImagem').html('<img src="'+defaultImg+'" />');
+
+      jQuery('#propostaTexto').html('');
     }
-
-    /*if (feature !== highlight) {
-      if (highlight) {
-        featureOverlay.getSource().removeFeature(highlight);
-      }
-      if (feature) {
-        featureOverlay.getSource().addFeature(feature);
-      }
-      highlight = feature;
-    }*/
-
   };
 
   map.on('click', function (evt) {
-    getFeatureLayerInfo(evt.pixel);
+    getFeatureLayerInfo(evt.pixel);    
   });
   
-  map.on('pointermove', function (evt) {
+  // MouseOver - bug por conta da sobreposição
+  // map.on('pointermove', function (evt) {
+  map.on('click', function (evt) {
     if (evt.dragging) {
       return;
     }
     var pixel = map.getEventPixel(evt.originalEvent);
     displayFeatureInfo(pixel);
   });
-/*
-  $(".close").click(fecharModal);
-  
-*/
 });

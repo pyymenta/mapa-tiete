@@ -33,6 +33,21 @@
           });
           return camada;
     };
+    PlatMap.prototype.createCustomVectorLayerFromKML = function(url, myStyle){
+          var camada = new ol.layer.Vector({
+            source: new ol.source.Vector({
+              url: url,
+              format: new ol.format.KML({
+                extractStyles: false,
+                extractAttributes: true,
+                maxDepth: 2
+              })              
+            }),
+            style: myStyle
+          });
+          return camada;
+    };
+
     /// Cria camada com features (do tipo ponto) agrupadas
     /// url: URL do arquivo KML
     /// cores: Objeto {textColor, strokeColor, fillColor}
