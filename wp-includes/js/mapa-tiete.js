@@ -29,15 +29,15 @@ const information = {
   },
   '_3C': {
   'titulo': 'Alças de pontes',
-  'texto': 'Orientar o escoamento das águas pluviais em direção a grandes áreas projetadas para receber, reter e retardar a descida de grandes volumes d´água;'
+  'texto': 'Implantar áreas de absorção de águas pluviais em alças de pontes que sejam fozes de tributários contribui para a redução de enchentes;'
   },
   '_4A': {
   'titulo': 'Parques lineares',
-  'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.<br>A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
+  'texto': 'A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
   },
   '_4B': {
   'titulo': 'Outros parques',
-  'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.<br>A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
+  'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor;'
   },
   '_5A': {
   'titulo': 'Requalificação de praças existentes',
@@ -56,7 +56,7 @@ const information = {
   'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.<br>A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
   },
   '_5E': {
-  'titulo': 'Outras praças',
+  'titulo': 'Novas praças',
   'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.<br>A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
   },
   '_6A': {
@@ -171,6 +171,9 @@ var mapImageLayer = new ol.layer.Image({
     });
 
 var defaultImg = 'http://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2014/08/arco_tiete.jpg';
+var cImage;
+var proposta;
+var imgUrl;
 
 function readProp(obj, prop) {
     return obj[prop];
@@ -190,7 +193,64 @@ var lStyle = new ol.style.Style({
 
 jQuery(document).ready(function() {
   jQuery('#propostaImagem').html("<img src='"+defaultImg+"' alt='Arco Tietê' />");
+
+  // Modal / Lightbox    
+  var modal = jQuery('#container_lightbox');
+  var isModal = false;
   
+  function hideLinks(){
+      if(!isModal)
+          jQuery(svg).css('opacity', '0');
+  }
+  function fixaCloseBT(){
+      var closeBT = jQuery('.close');
+      var mContent = jQuery('.modal_content');
+      jQuery('.close').css({'opacity': '1'});
+      closeBT.offset({
+          top: mContent.offset().top-6,
+          left: mContent.offset().left+mContent.width()+5
+      });
+  }
+  function openModal(){
+    jQuery(modal).css({
+        'opacity': '1',
+        'max-height': '100%',
+        'height': '100%',
+        'overflow': 'auto',
+    });
+    jQuery('body').toggleClass('modal_open');
+
+    // var modCont = '<h3>'+proposta.titulo+'</h3>'+imgUrl+'<p>'+proposta.texto+'</p>';
+    jQuery('#lightbox_content').html(jQuery('#infoContainer').html());
+    isModal = true;
+    setTimeout(fixaCloseBT, 100);
+  }
+  function fechaModal(){
+      jQuery('body').removeClass('modal_open');
+      isModal = false;
+      // hideLinks();
+      jQuery('body').css('padding-right', 'initial');
+      jQuery(modal).css({
+          'opacity': '0',
+          'height': '0',
+          'overflow': 'hidden',
+      });
+      jQuery('.close').css({'opacity': '0'});
+  }
+  jQuery(document).mouseup(function (e){
+      var container = jQuery(".modal_content");
+      if (!container.is(e.target) // se o alvo não for o container
+          && (container.has(e.target).length === 0) // ...nem um filho do container
+          && (e.target != jQuery('html').get(0))) // nem a scrollbar
+      {
+          fechaModal();
+      }
+  });
+
+  jQuery(".close").click(fechaModal);
+
+  /// End Modal / Lightbox
+
   /// Adiciona camadas ao array mapLayers
   var mapLayers = [new ol.layer.Tile({source: new ol.source.OSM()})];
 
@@ -200,7 +260,7 @@ jQuery(document).ready(function() {
   // for (var i = 0; i < kmlUrls.length; i++) {
   for (var i = kmlUrls.length-1; i >= 0; i--) {
     var nome = '_'+kmlUrls[i].split('.')[0];    
-    var camada = platMapAPI.createCustomVectorLayerFromKML("../kmls/"+kmlUrls[i], lStyle);
+    var camada = platMapAPI.createCustomVectorLayerFromKML("../wp-content/themes/gestaourbana-1.2/uploads/"+kmlUrls[i], lStyle);
     camada.set("name",nome); 
     mapLayers.push(camada);
   }
@@ -264,30 +324,31 @@ jQuery(document).ready(function() {
     });
     if (feature) {      
       var layer = cLayer.get('name');
-      var proposta = readProp(information, layer);      
-      var imgUrl = "<img src='../wp-includes/img/"+layer.split('_')[1]+".png' onerror=\"this.src='"+defaultImg+"'\" alt='"+proposta.titulo+"' />";
+      proposta = readProp(information, layer);      
+      imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+layer.split('_')[1]+".png' onerror=\"this.src='"+defaultImg+"'\" alt='"+proposta.titulo+"' />";
       jQuery('#propostaTitulo').html(proposta.titulo);      
       jQuery('#propostaImagem').html(imgUrl);
-      jQuery('#propostaTexto').html(proposta.texto);
+      jQuery('#propostaTexto').html(proposta.texto);      
     } else {
       jQuery('#propostaTitulo').html('Clique no perímetro desejado para obter mais informações.');      
-      jQuery('#propostaImagem').html('<img src="'+defaultImg+'" />');
+      jQuery('#propostaImagem').html('');
 
       jQuery('#propostaTexto').html('');
     }
   };
-bugMap = map;
-  map.on('click', function (evt) {
+  /*map.on('click', function (evt) {
     getFeatureLayerInfo(evt.pixel);    
-  });
+  });*/
   
   // MouseOver - bug por conta da sobreposição
   // map.on('pointermove', function (evt) {
   map.on('click', function (evt) {
+    getFeatureLayerInfo(evt.pixel);
     if (evt.dragging) {
       return;
     }
     var pixel = map.getEventPixel(evt.originalEvent);
     displayFeatureInfo(pixel);
   });
+  jQuery('#propostaImagem').click(openModal);
 });
