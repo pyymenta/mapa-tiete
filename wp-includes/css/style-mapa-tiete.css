@@ -51,6 +51,7 @@ div#infoContainer {
     padding-top: 10px;
     font-family: sans-serif;
     overflow-y: hidden;
+    display: none;
 }
 
 div#infoContainer > div > img {

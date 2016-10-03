@@ -5,15 +5,15 @@ var bugMap;
 const information = {
   '_1A': {
   'titulo': 'Destamponamento de córrego ',
-  'texto': 'O destamponamento é uma solução adotada para os córregos limpos a fim de aumentar a sua capacidade de vazão e melhorar a drenagem superficial urbana. Além disso, a abertura dos córregos promove o contato dos corpos d´água com a atmosfera e colabora para o ressurgimento da vida aquática e ciliar;'
+  'texto': '1A. Destamponar córregos limpos é uma solução adotada para reaproximar as pessoas dos cursos d´água, aumentar a capacidade de vazão fluvial e melhorar a drenagem superficial urbana. Além Disso, a abertura promove o contato dos corpos d´água com a atmosfera, colaborando para o ressurgimento da vida aquática e ciliar.'
   },
   '_1B': {
   'titulo': 'Qualificação de córregos abertos',
-  'texto': 'O destamponamento é uma solução adotada para os córregos limpos a fim de aumentar a sua capacidade de vazão e melhorar a drenagem superficial urbana. Além disso, a abertura dos córregos promove o contato dos corpos d´água com a atmosfera e colabora para o ressurgimento da vida aquática e ciliar;'
+  'texto': '1B. Qualificar córregos abertos é uma solução adotada para reaproximar as pessoas dos cursos d´água, aproveitando as estruturas existentes para implantação de percursos leves para pedestres e ciclistas, sem comprometer a capacidade de vazão atual.'
   },
   '_2A': {
   'titulo': 'Implantar eixos drenantes',
-  'texto': 'Criar grandes cordões de infiltração das águas pluviais em locais estratégicos, transversais ao sentido do escoamento superficial das bacias de drenagem, colaborando para impedir que as águas atinjam os pontos mais baixos da várzea;'
+  'texto': '2A. Implantar cordões de absorção das águas pluviais em vias públicas que antecedem áreas de alagamento é uma forma de criar barreiras ao escoamento superficial, ao mesmo tempo em que se qualifica as vias públicas com jardins lineares.'
   },
   '_2B': {
   'titulo': 'Canteiros drenantes',
@@ -21,91 +21,91 @@ const information = {
   },
   '_3A': {
   'titulo': 'Praças secas rebaixadas',
-  'texto': 'Orientar o escoamento das águas pluviais em direção a grandes áreas projetadas para receber, reter e retardar a descida de grandes volumes d´água;'
+  'texto': '3A. Implantar praças permeáveis capazes de absorver grandes volumes de água durante as chuvas torrenciais contribui para a redução de enchentes e alagamentos, ao passo em que o plantio de espécies adaptadas às cheias promove áreas ajardinadas de contemplação.'
   },
   '_3B': {
   'titulo': 'Praças de absorção',
-  'texto': 'Orientar o escoamento das águas pluviais em direção a grandes áreas projetadas para receber, reter e retardar a descida de grandes volumes d´água;'
+  'texto': '3B. Implantar praças secas rebaixadas capazes de receber, reter e retardar a descida de grandes volumes d´água durante as chuvas torrenciais contribui para a redução de enchentes e alagamentos, ao passo que oferece espaços públicos para atividades de esporte e lazer.'
   },
   '_3C': {
   'titulo': 'Alças de pontes',
-  'texto': 'Implantar áreas de absorção de águas pluviais em alças de pontes que sejam fozes de tributários contribui para a redução de enchentes;'
+  'texto': '3C. Implantar praças com capacidade de absorção das águas pluviais em alças de pontes localizadas sobre fozes de tributários do Rio Tietê contribui para a redução de enchentes e alagamentos, ao passo em que a qualificação destas áreas promove melhoria na acessibilidade aos passeios das pontes existentes.'
   },
   '_4A': {
   'titulo': 'Parques lineares',
-  'texto': 'A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
+  'texto': '4A. A recuperação ambiental das margens do sistema hídrico, além de reaproximar as pessoas dos córregos, colabora para a infiltração e armazenamento da água no lençol freático e para o surgimento da mata ciliar, importante componente para a produção de alimentos para a fauna aquática.'
   },
   '_4B': {
   'titulo': 'Outros parques',
-  'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor;'
+  'texto': '4B. Implantar novos parques aumenta a oferta de áreas de lazer, convívio e contemplação no Arco Tietê, além de colaborar para a absorção da irradiação solar, amenização das ilhas de calor e aumento da umidade relativa do ar.'
   },
   '_5A': {
   'titulo': 'Requalificação de praças existentes',
-  'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.<br>A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
+  'texto': '5A. Requalificar praças existentes aumentando sua arborização e promovendo novos espaços de lazer qualificados é uma estratégia para reaproximar a população local dos espaços públicos hoje subutilizados.'
   },
   '_5B': {
   'titulo': 'Praças oriundas de destinação obrigatória',
-  'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.<br>A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
+  'texto': ' 5B. Definir a localização das praças oriundas de destinação de grandes lotes é uma estratégia de garantir que sua posição seja a melhor possível em relação à rede de espaços públicos e equipamentos projetada para todo o Arco Tietê, evitando espaços verdes isolados e de difícil acesso.'
   },
   '_5C': {
   'titulo': 'Praças sobre túneis',
-  'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.<br>A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
+  'texto': '5C. Implantar praças sobre túneis, com novas vias locais perimetrais, é uma estratégia para que os espaços hoje ocupados pelas linhas de alta tensão (futuramente enterradas) sejam utilizados pela população, tornando-se novas frentes urbanas.'
   },
   '_5D': {
   'titulo': 'Praças sob viadutos',
-  'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.<br>A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
+  'texto': '5D. Implantar praças sob viadutos, com novas vias locais perimetrais, é uma estratégia para que os baixios de viadutos não se tornem fundos subutilizados da cidade, mas sim novos espaços públicos com potencial de gerar novas frentes urbanas.'
   },
   '_5E': {
   'titulo': 'Novas praças',
-  'texto': 'Aumentar o número de praças e parques que proporcionam áreas de lazer, convívio e contemplação e absorvem e refletem a irradiação solar, amenizando as ilhas de calor.<br>A recuperação ambiental das margens do sistema hídrico  colaboram para infiltração e armazenamento da água no lençol freático e para a criação da mata ciliar, importante componente para a produção de alimentos para a fauna aquática;'
+  'texto': '5E. Implantar novas praças aumenta a oferta de áreas de lazer, convívio e contemplação aos moradores dos bairros, além de colaborar para a absorção da irradiação solar, amenização das ilhas de calor e aumento da umidade relativa do ar.'
   },
   '_6A': {
   'titulo': 'Alamedas',
-  'texto': 'Criar um sistema ambiental em rede aumenta a conectividade entre áreas verdes, proporcionando percursos sombreados aos usuários e caminhos ecológicos para a fauna;'
+  'texto': '6A. A implantação de alamedas proporciona percursos sombreados aos pedestres e ciclistas e colabora para a formação de um sistema ambiental em rede, conectando áreas verdes, equipamentos e estações do trem e do metrô.'
   },
   '_6B': {
   'titulo': 'Bulevares',
-  'texto': 'Criar um sistema ambiental em rede aumenta a conectividade entre áreas verdes, proporcionando percursos sombreados aos usuários e caminhos ecológicos para a fauna;'
+  'texto': '6B. A implantação de bulevares ao longo de vias públicas que priorizam o transporte público colabora para o desenvolvimento urbano ao longo dos eixos de transporte e para a formação de um sistema ambiental em rede.'
   },
   '_7A': {
   'titulo': 'Abertura de novo viário',
-  'texto': 'A implantação de bulevares que interligam os bairros e priorizam o transporte público e alamedas de conexões locais com ciclovias e amplas calçadas irá promover a integração;'
+  'texto': '7A. A abertura de novas vias públicas que rompem com as grandes quadras aumenta a interligação entre áreas do Arco Tietê que hoje se encontram isoladas e possibilita a emergência de novas frentes urbanas.'
   },
   '_7B': {
   'titulo': 'Alargamento de viário existente',
-  'texto': 'A implantação de bulevares que interligam os bairros e priorizam o transporte público e alamedas de conexões locais com ciclovias e amplas calçadas irá promover a integração;'
+  'texto': '7B. Alargar vias públicas atualmente subdimensionadas assegura que os fluxos de pedestres e ciclistas possam ser garantidos ao lado de automóveis e, eventualmente, ônibus, promovendo diversidade modal às áreas de desenvolvimento urbano.'
   },
   '_7C': {
   'titulo': 'Requalificação de viário existente',
-  'texto': 'A implantação de bulevares que interligam os bairros e priorizam o transporte público e alamedas de conexões locais com ciclovias e amplas calçadas irá promover a integração;'
+  'texto': '7C. A requalificação do sistema viário é uma estratégia utilizada em vias públicas que devem receber reformas tanto em seus passeios quanto em seu leito carroçável, sem desapropriação, a fim de qualificar a circulação de todos os modos de transporte.'
   },
   '_8A': {
   'titulo': 'Ampliação e melhoria de passeios existentes',
-  'texto': 'A requalificação dos passeios por meio do redesenho de sua geometria, seja ampliando-o em detrimento do leito carroçável, seja diminuindo curvaturas para reduzir a velocidade dos automóveis incentivarão a locomoção peatonal pelo território. A acessibilidade deve ser garantida em ponto estratégicos  com a criação de amplos passeios que vencem os desníveis;'
+  'texto': '8A. Requalificar os passeios por meio do redesenho de sua geometria, seja ampliando-o em detrimento do leito carroçável, seja diminuindo curvaturas para reduzir a velocidade dos automóveis, incentiva a locomoção de pedestres e ciclistas pela cidade.'
   },
   '_8B': {
   'titulo': 'Acesso - rampas e escadarias',
-  'texto': 'A requalificação dos passeios por meio do redesenho de sua geometria, seja ampliando-o em detrimento do leito carroçável, seja diminuindo curvaturas para reduzir a velocidade dos automóveis incentivarão a locomoção peatonal pelo território. A acessibilidade deve ser garantida em ponto estratégicos  com a criação de amplos passeios que vencem os desníveis;'
+  'texto': '8B. Implantar novos acessos verticais por meio de rampas e escadarias associadas a passeios e espaços públicos é uma estratégia para promover acessibilidade às áreas com grandes desníveis no tecido urbano.'
   },
   '_9A': {
   'titulo': 'Ciclopassarelas sobre ferrovia',
-  'texto': 'Novas travessias associadas a equipamentos, espaços públicos ou estações de trem e metrô, que priorizam deslocamentos a pé e de bicicleta garantem a conexão entre bairros e o acesso a trabalho, serviços e equipamentos públicos;'
+  'texto': '9A. Implantar novas travessias sobre a ferrovia, associadas a equipamentos, espaços públicos e estações de trem, que priorizem deslocamentos a pé e de bicicleta, garante novas conexões entre bairros e a melhoria no acesso ao trabalho, aos serviços e aos equipamentos públicos.'
   },
   '_9B': {
   'titulo': 'Ciclopassarela sob ferrovia',
-  'texto': 'Novas travessias associadas a equipamentos, espaços públicos ou estações de trem e metrô, que priorizam deslocamentos a pé e de bicicleta garantem a conexão entre bairros e o acesso a trabalho, serviços e equipamentos públicos;'
+  'texto': '9B. Implantar novas travessias sob a ferrovia associadas a equipamentos, espaços públicos e estações de trem, que priorizem deslocamentos a pé e de bicicleta, garante novas conexões entre bairros e a melhoria no acesso ao trabalho, aos serviços e aos equipamentos públicos.'
   },
   '_9C': {
   'titulo': 'Ciclopassarela sobre rios ou córregos',
-  'texto': 'Novas travessias associadas a equipamentos, espaços públicos ou estações de trem e metrô, que priorizam deslocamentos a pé e de bicicleta garantem a conexão entre bairros e o acesso a trabalho, serviços e equipamentos públicos;'
+  'texto': '9C. Implantar novas travessias sobre o Rio Tietê, associadas a equipamentos ou espaços públicos, que priorizem deslocamentos a pé e de bicicleta, garante maior conexão entre as margens do rio, promovendo novos eixos de integração do tecido urbano. '
   },
   '_10A': {
   'titulo': 'Equipamentos em terrenos públicos subutilizados',
-  'texto': 'A implantação de novos equipamentos, além de suprir as necessidades da população, qualifica a vida nos bairros;'
+  'texto': '10A. O enterramento das linhas de alta tensão é uma solução adotada para a implantação de novas vias públicas sem a necessidade de desapropriação de moradores.'
   },
   '_10B': {
   'titulo': 'Equipamentos em galpões reformados',
-  'texto': 'A implantação de novos equipamentos, além de suprir as necessidades da população, qualifica a vida nos bairros;'
+  'texto': '10B. A implantação de infovias é uma estratégia adotada para incentivar usos produtivos ao longo dos eixos estratégicos.'
   },
   '_10C': {
   'titulo': 'Equipamentos em áreas indicadas de parcelamento e grandes lotes',
@@ -250,12 +250,19 @@ jQuery(document).ready(function() {
   /// End Modal / Lightbox
 
   /// Adiciona camadas ao array mapLayers    
+
+  /// CAMADAS
+  // CHAVE BING
+  /*
+  AsOanmHkUY8fnofQzDZbdilguBznksMGkjFh0OqiY7mrzoMP7Nj_hUA6Vx5HP9-h
+  */
   var mapLayers = [new ol.layer.Tile({
     source: new ol.source.OSM()
+    // source: new ol.source.BingMaps({key: 'AsOanmHkUY8fnofQzDZbdilguBznksMGkjFh0OqiY7mrzoMP7Nj_hUA6Vx5HP9-h', imagerySet: 'AerialWithLabels', culture: 'pt-BR'})
   })];
   lStyle = new ol.style.Style({
               stroke: new ol.style.Stroke({
-                color: 'rgba(0,0,0,0.5)',
+                color: 'rgba(243,146,0,0.8)',
                 width: 2
               }),
               fill: new ol.style.Fill({
@@ -282,26 +289,26 @@ jQuery(document).ready(function() {
 
     switch (perimCode) {
       case 1:
-        pStrCol = 'rgba(120,181,220,0.8)';
+        pStrCol = 'rgba(120,181,220,0.95)';
         pWidth = 3;
         pDash = [9,8];
         break;
       case 2:
-        pStrCol = 'rgba(60,90,131,0.8)';
+        pStrCol = 'rgba(60,90,131,0.95)';
         pWidth = 3;
         pDash = [7,7];
         break;
       case 3:
-        pStrCol = 'rgba(172,189,211,0.8)';
+        pStrCol = 'rgba(172,189,211,0.95)';
         break;
       case 4:
-        pStrCol = 'rgba(71,105,52,0.8)';
+        pStrCol = 'rgba(71,105,52,0.95)';
         break;
       case 5:
-        pStrCol = 'rgba(138,181,61,0.8)';
+        pStrCol = 'rgba(138,181,61,0.95)';
         break;
       case 6:
-        pStrCol = 'rgba(138,181,61,0.8)';
+        pStrCol = 'rgba(138,181,61,0.95)';
         if (perimSubcode == 'A') {
           pWidth = 2;
           pDash = [2,10];
@@ -312,26 +319,26 @@ jQuery(document).ready(function() {
         }
         break;
       case 7:
-        pStrCol = 'rgba(234,187,46,0.8)';
+        pStrCol = 'rgba(234,187,46,0.95)';
         if(perimSubcode == 'C')
-          pStrCol = 'rgba(249,233,185,0.8)';
+          pStrCol = 'rgba(249,233,185,0.95)';
         break;
       case 8:        
-        pStrCol = 'rgba(216,133,46,0.8)';
+        pStrCol = 'rgba(216,133,46,0.95)';
         pWidth = 1;
         break;
       case 9:
-        pStrCol = 'rgba(255,255,255,0.8)';
+        pStrCol = 'rgba(255,255,255,0.95)';
         break;
       case 10:       
-        pStrCol = 'rgba(0,0,0,0.8)';
+        pStrCol = 'rgba(0,0,0,0.95)';
         pWidth = 3;
         pDash = [0,10,0,10,1];
         break;
       default:        
         break;
     }
-    pFillCol = pStrCol.replace("0.8","0.5");
+    pFillCol = pStrCol.replace("0.95","0.25");
 
     lStyle = new ol.style.Style({
               stroke: new ol.style.Stroke({
@@ -437,6 +444,7 @@ jQuery(document).ready(function() {
     }
     var pixel = map.getEventPixel(evt.originalEvent);
     displayFeatureInfo(pixel);
+    openModal();
   });
-  jQuery('#propostaImagem').click(openModal);
+  // jQuery('#propostaImagem').click(openModal);
 });
