@@ -84,12 +84,12 @@ div#lightbox_content > div > img {
  /* Modal Content/Box */
 .modal_content {
 	background-color: #fefefe;
-	padding: 10px;
+	padding: 20px;
 	border: 1px solid #888;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	max-width: 940px;
-	max-height: calc(90% - 42px);
+	max-height: calc(95% - 42px);
 	position: absolute;
 	margin: auto;
 	right: 50%;

@@ -158,7 +158,6 @@ const information = {
 }
 var cLayer;
 var spCoords = [-5199000, -2695000];
-// var oldExtent = [-5191207.638373509, -2698731.105121977, -5183207.638373509, -2695731.105121977];
 
 // Working
 var extent = [-5204950,-2698891,-5181999,-2690035];
@@ -192,7 +191,7 @@ var lStyle = new ol.style.Style({
         });
 
 jQuery(document).ready(function() {
-  jQuery('#propostaImagem').html("<img src='"+defaultImg+"' alt='Arco Tietê' />");
+  // jQuery('#propostaImagem').html("<img src='"+defaultImg+"' alt='Arco Tietê' />");
 
   // Modal / Lightbox    
   var modal = jQuery('#container_lightbox');
@@ -208,7 +207,7 @@ jQuery(document).ready(function() {
       jQuery('.close').css({'opacity': '1'});
       closeBT.offset({
           top: mContent.offset().top-6,
-          left: mContent.offset().left+mContent.width()+5
+          left: mContent.offset().left+mContent.width()+20
       });
   }
   function openModal(){
@@ -248,18 +247,104 @@ jQuery(document).ready(function() {
   });
 
   jQuery(".close").click(fechaModal);
-
   /// End Modal / Lightbox
 
-  /// Adiciona camadas ao array mapLayers
-  var mapLayers = [new ol.layer.Tile({source: new ol.source.OSM()})];
+  /// Adiciona camadas ao array mapLayers    
+  var mapLayers = [new ol.layer.Tile({
+    source: new ol.source.OSM()
+  })];
+  lStyle = new ol.style.Style({
+              stroke: new ol.style.Stroke({
+                color: 'rgba(0,0,0,0.5)',
+                width: 2
+              }),
+              fill: new ol.style.Fill({
+                color: 'rgba(255,255,255,0.2)'
+              })
+            });
+  var perimetroMaior = platMapAPI.createCustomVectorLayerFromKML("../wp-content/themes/gestaourbana-1.2/uploads/PerimetroACT.kml", lStyle);
+  
 
   var kmlUrls = [];
   for (codigo in information){kmlUrls.push(codigo.split('_')[1]+'.kml');}
   
   // for (var i = 0; i < kmlUrls.length; i++) {
   for (var i = kmlUrls.length-1; i >= 0; i--) {
-    var nome = '_'+kmlUrls[i].split('.')[0];    
+    var nome = '_'+kmlUrls[i].split('.')[0];
+    
+    /// Estilo
+    var perimCode = parseInt(nome.replace(/[^0-9\.]/g, ''), 10);
+    var perimSubcode = nome.split(perimCode)[1];
+    var pStrCol = 'rgba(80,120,200,0.8)';
+    var pFillCol = 'rgba(80,120,200,0.5)';
+    var pWidth = 2;
+    var pDash = [0];
+
+    switch (perimCode) {
+      case 1:
+        pStrCol = 'rgba(120,181,220,0.8)';
+        pWidth = 3;
+        pDash = [9,8];
+        break;
+      case 2:
+        pStrCol = 'rgba(60,90,131,0.8)';
+        pWidth = 3;
+        pDash = [7,7];
+        break;
+      case 3:
+        pStrCol = 'rgba(172,189,211,0.8)';
+        break;
+      case 4:
+        pStrCol = 'rgba(71,105,52,0.8)';
+        break;
+      case 5:
+        pStrCol = 'rgba(138,181,61,0.8)';
+        break;
+      case 6:
+        pStrCol = 'rgba(138,181,61,0.8)';
+        if (perimSubcode == 'A') {
+          pWidth = 2;
+          pDash = [2,10];
+        }
+        else {
+          pWidth = 3;
+          pDash = [3,10];
+        }
+        break;
+      case 7:
+        pStrCol = 'rgba(234,187,46,0.8)';
+        if(perimSubcode == 'C')
+          pStrCol = 'rgba(249,233,185,0.8)';
+        break;
+      case 8:        
+        pStrCol = 'rgba(216,133,46,0.8)';
+        pWidth = 1;
+        break;
+      case 9:
+        pStrCol = 'rgba(255,255,255,0.8)';
+        break;
+      case 10:       
+        pStrCol = 'rgba(0,0,0,0.8)';
+        pWidth = 3;
+        pDash = [0,10,0,10,1];
+        break;
+      default:        
+        break;
+    }
+    pFillCol = pStrCol.replace("0.8","0.5");
+
+    lStyle = new ol.style.Style({
+              stroke: new ol.style.Stroke({
+                color: pStrCol,
+                width: pWidth,
+                lineDash: pDash
+              }),
+              fill: new ol.style.Fill({
+                color: pFillCol
+              })
+            });
+    /// END Estilo
+
     var camada = platMapAPI.createCustomVectorLayerFromKML("../wp-content/themes/gestaourbana-1.2/uploads/"+kmlUrls[i], lStyle);
     camada.set("name",nome); 
     mapLayers.push(camada);
@@ -271,7 +356,8 @@ jQuery(document).ready(function() {
     minZoom: 12,
     maxZoom: 30
   });
-
+  perimetroMaior.set("name", "Arco Tietê"); 
+  mapLayers.push(perimetroMaior);
   var map = new ol.Map({
     layers: mapLayers,
     target: 'mapa',
@@ -283,12 +369,12 @@ jQuery(document).ready(function() {
     map: map,
     style: new ol.style.Style({
       stroke: new ol.style.Stroke({
-        color: '#FFFFFF',
+        color: 'rgba(255,255,255,0.5)',
         width: 3,
         lineDash: strokeLineDash
       }),
       fill: new ol.style.Fill({
-        color: 'rgba(255,255,255,0.5)'
+        color: 'rgba(255,255,255,0.2)'
       })
     })
   });
@@ -325,7 +411,9 @@ jQuery(document).ready(function() {
     if (feature) {      
       var layer = cLayer.get('name');
       proposta = readProp(information, layer);      
-      imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+layer.split('_')[1]+".png' onerror=\"this.src='"+defaultImg+"'\" alt='"+proposta.titulo+"' />";
+      // IMAGEM PADRÃO
+      // imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+layer.split('_')[1]+".png' onerror=\"this.src='"+defaultImg+"'\" alt='"+proposta.titulo+"' />";
+      imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+layer.split('_')[1]+".png' alt='"+proposta.titulo+"' />";
       jQuery('#propostaTitulo').html(proposta.titulo);      
       jQuery('#propostaImagem').html(imgUrl);
       jQuery('#propostaTexto').html(proposta.texto);      
