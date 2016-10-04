@@ -157,7 +157,7 @@ const information = {
   }
 }
 var cLayer;
-var spCoords = [-5199000, -2695000];
+var spCoords = [-5193000, -2695000];
 
 // Working
 var extent = [-5204950,-2698891,-5181999,-2690035];
@@ -257,8 +257,8 @@ jQuery(document).ready(function() {
   AsOanmHkUY8fnofQzDZbdilguBznksMGkjFh0OqiY7mrzoMP7Nj_hUA6Vx5HP9-h
   */
   var mapLayers = [new ol.layer.Tile({
-    source: new ol.source.OSM()
-    // source: new ol.source.BingMaps({key: 'AsOanmHkUY8fnofQzDZbdilguBznksMGkjFh0OqiY7mrzoMP7Nj_hUA6Vx5HP9-h', imagerySet: 'AerialWithLabels', culture: 'pt-BR'})
+    // source: new ol.source.OSM()
+    source: new ol.source.BingMaps({key: 'AsOanmHkUY8fnofQzDZbdilguBznksMGkjFh0OqiY7mrzoMP7Nj_hUA6Vx5HP9-h', imagerySet: 'AerialWithLabels', culture: 'pt-BR'})
   })];
   lStyle = new ol.style.Style({
               stroke: new ol.style.Stroke({
@@ -270,7 +270,8 @@ jQuery(document).ready(function() {
               })
             });
   var perimetroMaior = platMapAPI.createCustomVectorLayerFromKML("../wp-content/themes/gestaourbana-1.2/uploads/PerimetroACT.kml", lStyle);
-  
+  perimetroMaior.set("name", "Arco Tietê"); 
+  mapLayers.push(perimetroMaior);
 
   var kmlUrls = [];
   for (codigo in information){kmlUrls.push(codigo.split('_')[1]+'.kml');}
@@ -363,8 +364,7 @@ jQuery(document).ready(function() {
     minZoom: 12,
     maxZoom: 30
   });
-  perimetroMaior.set("name", "Arco Tietê"); 
-  mapLayers.push(perimetroMaior);
+  
   var map = new ol.Map({
     layers: mapLayers,
     target: 'mapa',
