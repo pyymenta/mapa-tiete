@@ -21,11 +21,11 @@ const information = {
   },
   '_3A': {
   'titulo': 'Praças secas rebaixadas',
-  'texto': '3A. Implantar praças permeáveis capazes de absorver grandes volumes de água durante as chuvas torrenciais contribui para a redução de enchentes e alagamentos, ao passo em que o plantio de espécies adaptadas às cheias promove áreas ajardinadas de contemplação.'
+  'texto': '3A. Implantar praças secas rebaixadas capazes de receber, reter e retardar a descida de grandes volumes d´água durante as chuvas torrenciais contribui para a redução de enchentes e alagamentos, ao passo que oferece espaços públicos para atividades de esporte e lazer.'
   },
   '_3B': {
   'titulo': 'Praças de absorção',
-  'texto': '3B. Implantar praças secas rebaixadas capazes de receber, reter e retardar a descida de grandes volumes d´água durante as chuvas torrenciais contribui para a redução de enchentes e alagamentos, ao passo que oferece espaços públicos para atividades de esporte e lazer.'
+  'texto': '3B. Implantar praças permeáveis capazes de absorver grandes volumes de água durante as chuvas torrenciais contribui para a redução de enchentes e alagamentos, ao passo em que o plantio de espécies adaptadas às cheias promove áreas ajardinadas de contemplação.'
   },
   '_3C': {
   'titulo': 'Alças de pontes',
@@ -36,7 +36,7 @@ const information = {
   'texto': '4A. A recuperação ambiental das margens do sistema hídrico, além de reaproximar as pessoas dos córregos, colabora para a infiltração e armazenamento da água no lençol freático e para o surgimento da mata ciliar, importante componente para a produção de alimentos para a fauna aquática.'
   },
   '_4B': {
-  'titulo': 'Outros parques',
+  'titulo': 'Novos parques',
   'texto': '4B. Implantar novos parques aumenta a oferta de áreas de lazer, convívio e contemplação no Arco Tietê, além de colaborar para a absorção da irradiação solar, amenização das ilhas de calor e aumento da umidade relativa do ar.'
   },
   '_5A': {
@@ -266,7 +266,7 @@ jQuery(document).ready(function() {
                 width: 2
               }),
               fill: new ol.style.Fill({
-                color: 'rgba(255,255,255,0.2)'
+                color: 'rgba(255,255,255,0.3)'
               })
             });
   var perimetroMaior = platMapAPI.createCustomVectorLayerFromKML("../wp-content/themes/gestaourbana-1.2/uploads/PerimetroACT.kml", lStyle);
@@ -311,11 +311,11 @@ jQuery(document).ready(function() {
       case 6:
         pStrCol = 'rgba(138,181,61,0.95)';
         if (perimSubcode == 'A') {
-          pWidth = 2;
+          pWidth = 3;
           pDash = [2,10];
         }
         else {
-          pWidth = 3;
+          pWidth = 5;
           pDash = [3,10];
         }
         break;
@@ -447,4 +447,11 @@ jQuery(document).ready(function() {
     openModal();
   });
   // jQuery('#propostaImagem').click(openModal);
+
+  /// Estilo dos controles e botões
+  /*var zCtrl = jQuery('.ol-zoom')[0];
+  jQuery(zCtrl).css({
+    'position':'fixed',
+    ''
+  });*/
 });
