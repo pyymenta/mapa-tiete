@@ -173,6 +173,7 @@ var defaultImg = 'http://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/20
 var cImage;
 var proposta;
 var imgUrl;
+var mapLayers;
 
 function readProp(obj, prop) {
     return obj[prop];
@@ -256,7 +257,7 @@ jQuery(document).ready(function() {
   /*
   AsOanmHkUY8fnofQzDZbdilguBznksMGkjFh0OqiY7mrzoMP7Nj_hUA6Vx5HP9-h
   */
-  var mapLayers = [new ol.layer.Tile({
+  mapLayers = [new ol.layer.Tile({
     // source: new ol.source.OSM()
     source: new ol.source.BingMaps({key: 'AsOanmHkUY8fnofQzDZbdilguBznksMGkjFh0OqiY7mrzoMP7Nj_hUA6Vx5HP9-h', imagerySet: 'AerialWithLabels', culture: 'pt-BR'})
   })];
@@ -266,7 +267,7 @@ jQuery(document).ready(function() {
                 width: 2
               }),
               fill: new ol.style.Fill({
-                color: 'rgba(255,255,255,0.3)'
+                color: 'rgba(255,255,255,0.2)'
               })
             });
   var perimetroMaior = platMapAPI.createCustomVectorLayerFromKML("../wp-content/themes/gestaourbana-1.2/uploads/PerimetroACT.kml", lStyle);
@@ -448,10 +449,49 @@ jQuery(document).ready(function() {
   });
   // jQuery('#propostaImagem').click(openModal);
 
-  /// Estilo dos controles e botões
-  /*var zCtrl = jQuery('.ol-zoom')[0];
-  jQuery(zCtrl).css({
-    'position':'fixed',
-    ''
-  });*/
+  /// Cria menu com botões para ativar e desativar camadas
+  // var btTemplate = '<div class="layerToggleBt" id="layer00X">Camada 00X</div>';
+  function makebt(codigo) {
+    var botao = '';
+    if(Array.isArray(codigo)){
+      for (var i = 0; i < codigo.length; i++) {
+        mbt(codigo[i]);
+      }
+    }
+    else{
+      mbt(codigo);
+    } 
+    function mbt(code) {
+       botao += '<button class="layerToggleBt" id="'+code+'" onclick="tLayers(\''+code+'\', this)">Camada '+code+'</button>';       
+    }
+    return botao;
+  }
+  var redeHidrica = '<h5>Rede Hídrica</h5>'+makebt(['1A','1B','2A','2B','3A','3B','3C']);  
+  var espacoPublico = '<h5>Rede de Espaço Público</h5>'+makebt(['4A','4B','5A','5B','5C']);
+  // var menuContent = '<span>Legenda</span>'+redeHidrica+'<hr />'+espacoPublico;
+  var menuContent = redeHidrica+'<hr />'+espacoPublico;
+  jQuery('#layersMenu').html(menuContent);
+  bugMap = map;
 });
+
+function tLayers(codigo, elemento) {
+  var _code = '_'+codigo;
+  var _layer;
+  var _show = 'Exibir Camada '+codigo;
+  var _hide = 'Ocultar Camada '+codigo;
+  for (var i = mapLayers.length - 1; i >= 0; i--) {
+    if(mapLayers[i].get('name') == _code){
+      _layer = mapLayers[i];
+      break;
+    }
+  }  
+  platMapAPI.showHideCamada(_layer, elemento, _show, _hide);  
+}
+
+function getFromLayers(codigo){
+  for (var i = mapLayers.length - 1; i >= 0; i--) {
+    if(mapLayers[i].get('name') == codigo)
+      console.log('SHAZAM!');
+    console.log(mapLayers[i].get('name'));
+  }
+}
