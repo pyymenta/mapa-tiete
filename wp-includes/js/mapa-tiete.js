@@ -156,6 +156,7 @@ const information = {
   'texto': 'Implantar Conjuntos de Habitação Social de dimensões menores e mais espalhados pelo território, contemplando fachadas ativas, faixas de fruição pública, mix de rendas e espaços públicos de qualidade, procurando ao máximo relacionar os conjuntos com o espaço urbano à sua volta;'
   }
 }
+const legenda = '<div id="g-legenda02-box" class="ai2html"><style type="text/css" media="screen,print">.g-artboard {margin:0 auto;}</style><div id="g-legenda02-Prancheta_1" class="g-artboard g-artboard-v3 " data-min-width="945"><style type="text/css" media="screen,print">#g-legenda02-Prancheta_1{        position:relative;        overflow:hidden;        width:945px;      }      .g-aiAbs{        position:absolute;      }      .g-aiImg{        display:block;        width:100% !important;      }      #g-legenda02-Prancheta_1 p{        font-family:nyt-franklin,arial,helvetica,sans-serif;        font-size:13px;        line-height:18px;        margin:0;      }      #g-legenda02-Prancheta_1 .g-aiPstyle0 {        font-family:arial,helvetica,sans-serif;        line-height:16px;        font-weight:bold;        text-align:right;        color:#000000;      }      #g-legenda02-Prancheta_1 .g-aiPstyle1 {        font-family:arial,helvetica,sans-serif;        font-size:11px;        line-height:13px;        font-weight:bold;        color:#000000;      }      #g-legenda02-Prancheta_1 .g-aiPstyle2 {        font-family:arial,helvetica,sans-serif;        font-size:11px;        line-height:13px;        color:#000000;      }      #g-legenda02-Prancheta_1 .g-aiPstyle3 {        font-family:arial,helvetica,sans-serif;        line-height:16px;        font-weight:bold;        text-align:right;        letter-spacing:0.02833333333333em;        color:#000000;      }      #g-legenda02-Prancheta_1 .g-aiPstyle4 {        font-family:arial,helvetica,sans-serif;        font-size:11px;        line-height:15px;        color:#000000;      }      .g-aiPtransformed p { white-space: nowrap; }    </style>    <div id="g-legenda02-Prancheta_1-graphic">      <img id="g-ai0-0" class="g-aiImg" src="../wp-content/themes/gestaourbana-1.2/uploads/legenda02-Prancheta_1.png">      <div id="g-ai0-1" class="g-Camada_1 g-aiAbs" style="top:0.1596%;right:77.4603%;">        <p class="g-aiPstyle0">REDE HÍDRICA</p>      </div>      <div id="g-ai0-2" class="g-Camada_1 g-aiAbs" style="top:0.1596%;left:25.8201%;">        <p class="g-aiPstyle1">1.</p>      </div>      <div id="g-ai0-3" class="g-Camada_1 g-aiAbs" style="top:0.1596%;left:26.8098%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-4" class="g-Camada_1 g-aiAbs" style="top:0.1596%;left:29.7354%;">        <p class="g-aiPstyle1">Recuperação de Córregos</p>      </div>      <div id="g-ai0-5" class="g-Camada_1 g-aiAbs" style="top:0.1596%;left:51.703%;">        <p class="g-aiPstyle1">2.</p>      </div>      <div id="g-ai0-6" class="g-Camada_1 g-aiAbs" style="top:0.1596%;left:55.6184%;">        <p class="g-aiPstyle1">Eixos drenantes</p>      </div>      <div id="g-ai0-7" class="g-Camada_1 g-aiAbs" style="top:0.1596%;left:81.3757%;">        <p class="g-aiPstyle1">Áreas de absorção</p>      </div>      <div id="g-ai0-8" class="g-Camada_1 g-aiAbs" style="top:0.3191%;left:77.4603%;"><p class="g-aiPstyle1">3.</p>      </div>      <div id="g-ai0-9" class="g-Camada_1 g-aiAbs" style="top:0.3191%;left:78.45%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-10" class="g-Camada_1 g-aiAbs" style="top:0.4787%;left:52.6927%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-11" class="g-Camada_1 g-aiAbs" style="top:2.5532%;left:55.6184%;">        <p class="g-aiPstyle2">a. Pisos drenantes</p>      </div>      <div id="g-ai0-12" class="g-Camada_1 g-aiAbs" style="top:3.0319%;left:29.7354%;">        <p class="g-aiPstyle2">a. Destamponamento</p>      </div>      <div id="g-ai0-13" class="g-Camada_1 g-aiAbs" style="top:3.0319%;left:81.3757%;">        <p class="g-aiPstyle2">a. Praças secas rebaixadas</p>      </div>      <div id="g-ai0-14" class="g-Camada_1 g-aiAbs" style="top:4.7872%;left:55.6184%;">        <p class="g-aiPstyle2">b. Canteiros drenantes</p>      </div>      <div id="g-ai0-15" class="g-Camada_1 g-aiAbs" style="top:5.4255%;left:81.3757%;">        <p class="g-aiPstyle2">b. Praças de absorção</p>      </div>      <div id="g-ai0-16" class="g-Camada_1 g-aiAbs" style="top:7.0213%;left:29.7354%;">        <p class="g-aiPstyle2">b. Qualificação de córregos abertos</p>      </div>      <div id="g-ai0-17" class="g-Camada_1 g-aiAbs" style="top:7.8191%;left:81.3757%;">        <p class="g-aiPstyle2">c. Alças de pontes</p>      </div>      <div id="g-ai0-18" class="g-Camada_1 g-aiAbs" style="top:16.4362%;right:77.4603%;">        <p class="g-aiPstyle0">REDE DE ESPAÇO PÚBLICO</p>      </div>      <div id="g-ai0-19" class="g-Camada_1 g-aiAbs" style="top:16.4362%;left:25.8201%;">        <p class="g-aiPstyle1">4.</p>      </div>      <div id="g-ai0-20" class="g-Camada_1 g-aiAbs" style="top:16.4362%;left:26.8098%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-21" class="g-Camada_1 g-aiAbs" style="top:16.4362%;left:29.7354%;">        <p class="g-aiPstyle1">Parques</p>      </div>      <div id="g-ai0-22" class="g-Camada_1 g-aiAbs" style="top:16.4362%;left:51.703%;">        <p class="g-aiPstyle1">5.</p>      </div>      <div id="g-ai0-23" class="g-Camada_1 g-aiAbs" style="top:16.4362%;left:52.6926%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-24" class="g-Camada_1 g-aiAbs" style="top:16.4362%;left:55.6184%;">        <p class="g-aiPstyle1">Praças</p>      </div>      <div id="g-ai0-25" class="g-Camada_1 g-aiAbs" style="top:16.4362%;left:77.5041%;">        <p class="g-aiPstyle1">6.</p>      </div>      <div id="g-ai0-26" class="g-Camada_1 g-aiAbs" style="top:16.4362%;left:78.4939%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-27" class="g-Camada_1 g-aiAbs" style="top:16.4362%;left:81.4195%;">        <p class="g-aiPstyle1">Eixos Ambientais </p>      </div>      <div id="g-ai0-28" class="g-Camada_1 g-aiAbs" style="top:18.8298%;left:55.6184%;">        <p class="g-aiPstyle2">a. Requalificação de prtaças</p>      </div>      <div id="g-ai0-29" class="g-Camada_1 g-aiAbs" style="top:19.3085%;left:29.7354%;">        <p class="g-aiPstyle2">a. Parques lineares</p>      </div>      <div id="g-ai0-30" class="g-Camada_1 g-aiAbs" style="top:19.3085%;left:81.4195%;">        <p class="g-aiPstyle2">a. Alamedas </p>      </div>      <div id="g-ai0-31" class="g-Camada_1 g-aiAbs" style="top:20.7447%;left:55.6184%;">        <p class="g-aiPstyle2">existentes</p>      </div>      <div id="g-ai0-32" class="g-Camada_1 g-aiAbs" style="top:21.7021%;left:29.7354%;">        <p class="g-aiPstyle2">b. Outros parques</p>      </div>      <div id="g-ai0-33" class="g-Camada_1 g-aiAbs" style="top:23.1383%;left:55.6184%;">        <p class="g-aiPstyle2">b. Praças oriundas de destinação </p>      </div>      <div id="g-ai0-34" class="g-Camada_1 g-aiAbs" style="top:23.2979%;left:81.4195%;">        <p class="g-aiPstyle2">b. Bulevares</p>      </div>      <div id="g-ai0-35" class="g-Camada_1 g-aiAbs" style="top:25.0532%;left:55.6184%;">        <p class="g-aiPstyle2">obrigatória</p>      </div>      <div id="g-ai0-36" class="g-Camada_1 g-aiAbs" style="top:27.2872%;left:55.6184%;">        <p class="g-aiPstyle2">c. Praças sobre túneis</p>      </div>      <div id="g-ai0-37" class="g-Camada_1 g-aiAbs" style="top:29.6808%;left:55.6184%;">        <p class="g-aiPstyle2">d. Praças sob viadutos</p>      </div>      <div id="g-ai0-38" class="g-Camada_1 g-aiAbs" style="top:32.0745%;left:55.6184%;">        <p class="g-aiPstyle2">e. Outras praças</p>      </div>      <div id="g-ai0-39" class="g-Camada_1 g-aiAbs" style="top:40.6915%;right:77.4603%;">        <p class="g-aiPstyle0">REDE DE MOBILIDADE</p>      </div>      <div id="g-ai0-40" class="g-Camada_1 g-aiAbs" style="top:40.6915%;left:25.8201%;">        <p class="g-aiPstyle1">7.</p>      </div>      <div id="g-ai0-41" class="g-Camada_1 g-aiAbs" style="top:40.6915%;left:26.8098%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-42" class="g-Camada_1 g-aiAbs" style="top:40.6915%;left:29.7354%;">        <p class="g-aiPstyle1">Sistema Viário</p>      </div>      <div id="g-ai0-43" class="g-Camada_1 g-aiAbs" style="top:40.6915%;left:51.703%;">        <p class="g-aiPstyle1">8.</p>      </div>      <div id="g-ai0-44" class="g-Camada_1 g-aiAbs" style="top:40.6915%;left:52.6926%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-45" class="g-Camada_1 g-aiAbs" style="top:40.6915%;left:55.6184%;">        <p class="g-aiPstyle1">Passeios</p>      </div>      <div id="g-ai0-46" class="g-Camada_1 g-aiAbs" style="top:40.6915%;left:77.4603%;">        <p class="g-aiPstyle1">9.</p>      </div>      <div id="g-ai0-47" class="g-Camada_1 g-aiAbs" style="top:40.6915%;left:78.4499%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-48" class="g-Camada_1 g-aiAbs" style="top:40.6915%;left:81.3757%;">        <p class="g-aiPstyle1">Transposições </p>      </div>      <div id="g-ai0-49" class="g-Camada_1 g-aiAbs" style="top:43.5638%;left:81.3757%;">        <p class="g-aiPstyle2">a. Ciclopassarelas sobre ferrovia</p>      </div>      <div id="g-ai0-50" class="g-Camada_1 g-aiAbs" style="top:43.5638%;left:29.7354%;">        <p class="g-aiPstyle2">a. Abertura de novo viário</p>      </div>      <div id="g-ai0-51" class="g-Camada_1 g-aiAbs" style="top:43.5638%;left:55.6184%;">        <p class="g-aiPstyle2">a. Ampliação e memória de </p>      </div>      <div id="g-ai0-52" class="g-Camada_1 g-aiAbs" style="top:45.4787%;left:55.6184%;">        <p class="g-aiPstyle2">passeios existentes</p>      </div>      <div id="g-ai0-53" class="g-Camada_1 g-aiAbs" style="top:45.9574%;left:81.3757%;">        <p class="g-aiPstyle2">b. Ciclopassarelas sob ferrovia</p>      </div>      <div id="g-ai0-54" class="g-Camada_1 g-aiAbs" style="top:45.9574%;left:29.7354%;">        <p class="g-aiPstyle2">b. Alargamento de viário existente</p>      </div>      <div id="g-ai0-55" class="g-Camada_1 g-aiAbs" style="top:47.8723%;left:55.6184%;">        <p class="g-aiPstyle2">b. Acessos – rampas e escadarias</p>      </div>      <div id="g-ai0-56" class="g-Camada_1 g-aiAbs" style="top:48.1915%;left:81.3757%;">        <p class="g-aiPstyle2">c. Ciclopassarelas sobre rios ou </p>      </div>      <div id="g-ai0-57" class="g-Camada_1 g-aiAbs" style="top:49.9468%;left:29.7354%;">        <p class="g-aiPstyle2">c. Requalificação de viário existente</p>      </div>      <div id="g-ai0-58" class="g-Camada_1 g-aiAbs" style="top:50.1064%;left:81.3757%;">        <p class="g-aiPstyle2">córregos</p>      </div>      <div id="g-ai0-59" class="g-Camada_1 g-aiAbs" style="top:58.2447%;right:77.4603%;">        <p class="g-aiPstyle3">INFRAESTRUTURA</p>      </div>      <div id="g-ai0-60" class="g-Camada_1 g-aiAbs" style="top:58.2447%;left:25.8201%;">        <p class="g-aiPstyle1">10.</p>      </div>      <div id="g-ai0-61" class="g-Camada_1 g-aiAbs" style="top:58.2447%;left:27.457%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-62" class="g-Camada_1 g-aiAbs" style="top:58.2447%;left:29.7354%;">        <p class="g-aiPstyle1">Espaço Produtivo</p>      </div>      <div id="g-ai0-63" class="g-Camada_1 g-aiAbs" style="top:58.2447%;left:51.703%;">        <p class="g-aiPstyle1">11.</p>      </div>      <div id="g-ai0-64" class="g-Camada_1 g-aiAbs" style="top:58.2447%;left:53.3399%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-65" class="g-Camada_1 g-aiAbs" style="top:58.2447%;left:55.6184%;">        <p class="g-aiPstyle1">Equipamentos Públicos</p>      </div>      <div id="g-ai0-66" class="g-Camada_1 g-aiAbs" style="top:58.2447%;left:77.4603%;">        <p class="g-aiPstyle1">12.</p>      </div>      <div id="g-ai0-67" class="g-Camada_1 g-aiAbs" style="top:58.2447%;left:79.0972%;">        <p class="g-aiPstyle1"> </p>      </div>      <div id="g-ai0-68" class="g-Camada_1 g-aiAbs" style="top:58.2447%;left:81.3757%;">        <p class="g-aiPstyle1">Produção Habitacional</p>      </div>      <div id="g-ai0-69" class="g-Camada_1 g-aiAbs" style="top:60.7978%;left:81.4195%;">        <p class="g-aiPstyle4">a. Fruição pública</p>        <p class="g-aiPstyle4">b. Pequenas praças como espaços </p>        <p class="g-aiPstyle4">de socialização</p>        <p class="g-aiPstyle4">c. Divisões condominiais com </p>        <p class="g-aiPstyle4">poucas unidades habitacionais e </p>        <p class="g-aiPstyle4">divididos por faixa de atendimento</p>        <p class="g-aiPstyle4">d. Fachada ativa</p>        <p class="g-aiPstyle4">e. Demarcação de áreas para </p>        <p class="g-aiPstyle4">habitação em terrenos menores, </p>        <p class="g-aiPstyle4">distribuídos pelo território</p>        <p class="g-aiPstyle4">f. Taxas de ocupação mais altas </p>        <p class="g-aiPstyle4">em áreas próximas às áreas verdes</p>        <p class="g-aiPstyle4">g. Maiores áreas condominiais </p>        <p class="g-aiPstyle4">verdes em regiões com pouca </p>        <p class="g-aiPstyle4">oferta de áreas verdes</p>      </div>      <div id="g-ai0-70" class="g-Camada_1 g-aiAbs" style="top:61.117%;left:29.7354%;">        <p class="g-aiPstyle2">a. Aterramento de linhão</p>      </div>      <div id="g-ai0-71" class="g-Camada_1 g-aiAbs" style="top:61.117%;left:55.6184%;">        <p class="g-aiPstyle2">a. Equipamentos em terrenos</p>      </div>      <div id="g-ai0-72" class="g-Camada_1 g-aiAbs" style="top:63.5106%;left:29.7354%;">        <p class="g-aiPstyle2">b. Infovia</p>      </div>      <div id="g-ai0-73" class="g-Camada_1 g-aiAbs" style="top:63.5106%;left:55.6184%;">        <p class="g-aiPstyle2">públicos subutilizado</p>      </div>      <div id="g-ai0-74" class="g-Camada_1 g-aiAbs" style="top:65.9042%;left:55.6184%;">        <p class="g-aiPstyle2">b.  Equipamentos em galpões </p>      </div>      <div id="g-ai0-75" class="g-Camada_1 g-aiAbs" style="top:68.2978%;left:55.6184%;">        <p class="g-aiPstyle2">existentes de valor histórico</p>      </div>      <div id="g-ai0-76" class="g-Camada_1 g-aiAbs" style="top:70.6915%;left:55.6184%;">        <p class="g-aiPstyle2">c.  Equipamentos em áreas </p>      </div>      <div id="g-ai0-77" class="g-Camada_1 g-aiAbs" style="top:73.0851%;left:55.6184%;">        <p class="g-aiPstyle2">indicadas de parcelamento </p>      </div>      <div id="g-ai0-78" class="g-Camada_1 g-aiAbs" style="top:75.4787%;left:55.6184%;">        <p class="g-aiPstyle2">de grandes lotes </p>      </div>    </div>  </div>  <!-- End ai2html - 2016-10-06 - 16:46 --></div>';
 var cLayer;
 var spCoords = [-5193000, -2695000];
 
@@ -172,6 +173,7 @@ var mapImageLayer = new ol.layer.Image({
 var defaultImg = 'http://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2014/08/arco_tiete.jpg';
 var cImage;
 var proposta;
+var acoesIlustradas = '';
 var imgUrl;
 var mapLayers;
 
@@ -193,6 +195,7 @@ var lStyle = new ol.style.Style({
 
 jQuery(document).ready(function() {
   // jQuery('#propostaImagem').html("<img src='"+defaultImg+"' alt='Arco Tietê' />");
+  jQuery('#legendaMapa').html(legenda);
 
   // Modal / Lightbox    
   var modal = jQuery('#container_lightbox');
@@ -275,7 +278,19 @@ jQuery(document).ready(function() {
   mapLayers.push(perimetroMaior);
 
   var kmlUrls = [];
-  for (codigo in information){kmlUrls.push(codigo.split('_')[1]+'.kml');}
+  /// CORREÇÃO PARA AUSÊNCIA DE INFORMAÇÃO
+  var propsNumber = 0;
+  for (codigo in information){
+    propsNumber++;
+    kmlUrls.push(codigo.split('_')[1]+'.kml');
+    if(propsNumber < 27) {
+      var _prop = readProp(information, codigo);
+      var thumb = '<img src="../wp-content/themes/gestaourbana-1.2/uploads/'+codigo.split("_")[1]+'_thumb.png" alt="'+codigo+'" width="150" />';
+      var box = '<div>'+thumb+'<p>'+_prop.texto+'</p></div>';    
+      acoesIlustradas += box;
+    }
+  }
+  jQuery('#acoesIlustradas').html(acoesIlustradas);
   
   // for (var i = 0; i < kmlUrls.length; i++) {
   for (var i = kmlUrls.length-1; i >= 0; i--) {
@@ -451,7 +466,7 @@ jQuery(document).ready(function() {
 
   /// Cria menu com botões para ativar e desativar camadas
   // var btTemplate = '<div class="layerToggleBt" id="layer00X">Camada 00X</div>';
-  function makebt(codigo) {
+  /*function makebt(codigo) {
     var botao = '';
     if(Array.isArray(codigo)){
       for (var i = 0; i < codigo.length; i++) {
@@ -465,33 +480,38 @@ jQuery(document).ready(function() {
        botao += '<button class="layerToggleBt" id="'+code+'" onclick="tLayers(\''+code+'\', this)">Camada '+code+'</button>';       
     }
     return botao;
-  }
-  var redeHidrica = '<h5>Rede Hídrica</h5>'+makebt(['1A','1B','2A','2B','3A','3B','3C']);  
-  var espacoPublico = '<h5>Rede de Espaço Público</h5>'+makebt(['4A','4B','5A','5B','5C']);
-  // var menuContent = '<span>Legenda</span>'+redeHidrica+'<hr />'+espacoPublico;
-  var menuContent = redeHidrica+'<hr />'+espacoPublico;
+  }*/
+  var redeHidrica = '<h5>Rede Hídrica</h5>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'1\', this)">Recuperação de Córregos</button>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'2\', this)">Eixos Drenantes</button>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'3\', this)">Áreas de Absorção</button>';
+  var espacoPublico = '<h5>Rede de Espaço Público</h5>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'4\', this)">Parques</button>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'5\', this)">Praças</button>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'6\', this)">Eixos Ambientais</button>';
+  var mobilidade = '<h5>Rede de Mobilidade</h5>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'7\', this)">Sistema Viário</button>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'8\', this)">Passeios</button>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'9\', this)">Transposições</button>';
+  var infraestrutura = '<h5>Infraestrutura</h5>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'10\', this)">Infraestrutura</button>';
+  
+  var menuContent = redeHidrica+'<hr />'+espacoPublico+'<hr />'+mobilidade+'<hr />'+infraestrutura;
   jQuery('#layersMenu').html(menuContent);
   bugMap = map;
 });
 
 function tLayers(codigo, elemento) {
-  var _code = '_'+codigo;
+  // var _code = '_'+codigo;
+  jQuery(elemento).toggleClass('inactiveBt');
   var _layer;
-  var _show = 'Exibir Camada '+codigo;
-  var _hide = 'Ocultar Camada '+codigo;
+  var _show = jQuery(elemento).html();
   for (var i = mapLayers.length - 1; i >= 0; i--) {
-    if(mapLayers[i].get('name') == _code){
+    var layerCode;
+    if(mapLayers[i].get('name') != undefined)
+      layerCode = mapLayers[i].get('name').replace(/[^0-9\.]/g, '');
+    if(layerCode == codigo){
       _layer = mapLayers[i];
-      break;
+      platMapAPI.showHideCamada(_layer, elemento, _show, _show);
     }
   }  
-  platMapAPI.showHideCamada(_layer, elemento, _show, _hide);  
 }
 
-function getFromLayers(codigo){
+/*function getFromLayers(codigo){
   for (var i = mapLayers.length - 1; i >= 0; i--) {
     if(mapLayers[i].get('name') == codigo)
       console.log('SHAZAM!');
     console.log(mapLayers[i].get('name'));
   }
-}
+}*/
+
