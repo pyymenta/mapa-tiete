@@ -33,6 +33,35 @@
           });
           return camada;
     };
+
+    /**
+    * CONFIGURA ESTILO DA CAMADA
+    * RECEBE: URL DO ÍCONE
+    * RETORNA: ESTILO
+    */
+    PlatMap.prototype.getStyleLayerWIcon = function(urlIcon){
+      var stylePointLayer;
+      var iconStyle = new ol.style.Icon({
+        anchor: [0.5, 0.5],
+        anchorXUnits: 'fraction',
+        anchorYUnits: 'fraction',
+        opacity: 0.95,
+        scale: 1,
+        src: urlIcon
+      });
+      stylePointLayer = new ol.style.Style({
+        fill: new ol.style.Fill({
+          color: 'rgba(128, 159, 255, 0.3)'
+        }),
+        stroke: new ol.style.Stroke({
+          color: 'rgba(128, 159, 255, 1)',
+          width: 1
+        }),
+        image: iconStyle
+      });
+      return stylePointLayer;
+    };
+
     PlatMap.prototype.createCustomVectorLayerFromKML = function(url, myStyle){
           var camada = new ol.layer.Vector({
             source: new ol.source.Vector({
