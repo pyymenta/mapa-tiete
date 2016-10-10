@@ -14,9 +14,17 @@
 	<ExtendedData><SchemaData schemaUrl="#11A_PONTO">
 		<SimpleData name="Layer">0</SimpleData>
 		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
-		<SimpleData name="EntityHandle">207</SimpleData>
+		<SimpleData name="EntityHandle">209</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.705863382190032,-23.516280256919188,-6.78327155020088</coordinates></Point>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.696822365554098,-23.506165317401702,-6.79954119771719</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11A_PONTO">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">20A</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.631183649062073,-23.522093555339122,-6.833141595125198</coordinates></Point>
   </Placemark>
 </Folder>
 </Document></kml>

@@ -9,12 +9,14 @@ const information = {
   'texto': '1B. Qualificar córregos abertos é uma solução adotada para reaproximar as pessoas dos cursos d´água, aproveitando as estruturas existentes para implantação de percursos leves para pedestres e ciclistas, sem comprometer a capacidade de vazão atual.'
   },
   '_2A': {
-  'titulo': 'Implantar eixos drenantes',
-  'texto': '2A. Implantar cordões de absorção das águas pluviais em vias públicas que antecedem áreas de alagamento é uma forma de conter e reduzir o escoamento superficial, ao mesmo tempo em que se qualifica as vias públicas com jardins lineares.'
+  'titulo': 'Implantar canteiros drenantes',
+  // 'texto': '2A. Implantar cordões de absorção das águas pluviais em vias públicas que antecedem áreas de alagamento é uma forma de conter e reduzir o escoamento superficial, ao mesmo tempo em que se qualifica as vias públicas com jardins lineares.'
+  'texto': '2A. Implantar canteiros drenantes em vias públicas é uma forma de reduzir o escoamento superficial das águas pluviais em direção às áreas de alagamento, ao mesmo tempo em que se qualifica as vias públicas com jardins lineares.'
   },
   '_2B': {
-  'titulo': 'Canteiros drenantes',
-  'texto': '3A. Implantar praças permeáveis capazes de absorver grandes volumes de água durante as chuvas mais intensas contribui para a redução de enchentes e alagamentos, ao passo em que o plantio de espécies adaptadas às cheias promove áreas ajardinadas de contemplação.'
+  'titulo': 'Implantar pisos drenantes',
+  // 'texto': '3A. Implantar praças permeáveis capazes de absorver grandes volumes de água durante as chuvas mais intensas contribui para a redução de enchentes e alagamentos, ao passo em que o plantio de espécies adaptadas às cheias promove áreas ajardinadas de contemplação.'
+  'texto': '2B. Implantar pisos drenantes em vias públicas estreitas é uma forma de reduzir o escoamento superficial das águas pluviais em direção às áreas de alagamento sem diminuir o espaço dos passeios públicos.'
   },
   '_3A': {
   'titulo': 'Praças secas rebaixadas',
@@ -179,6 +181,8 @@ var proposta;
 var acoesIlustradas = '';
 var imgUrl;
 var mapLayers;
+var enlargeThumb;
+var arcoFeature;
 
 function readProp(obj, prop) {
     return obj[prop];
@@ -242,6 +246,28 @@ jQuery(document).ready(function() {
       });
       jQuery('.close').css({'opacity': '0'});
   }
+  enlargeThumb = function(code){
+    proposta = readProp(information, '_'+code);
+    // IMAGEM PADRÃO
+    // imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+layer.split('_')[1]+".png' onerror=\"this.src='"+defaultImg+"'\" alt='"+proposta.titulo+"' />";
+    imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+code+".png' alt='"+proposta.titulo+"' />";
+    jQuery('#propostaTitulo').html(proposta.titulo);      
+    jQuery('#propostaTexto').html(proposta.texto);
+    jQuery('#propostaImagem').html('<img src="../wp-content/themes/gestaourbana-1.2/uploads/'+code+'.png" alt="'+code+'" />');
+    jQuery('#container_lightbox').css({
+        'opacity': '1',
+        'max-height': '100%',
+        'height': '100%',
+        'overflow': 'auto',
+    });
+    jQuery('body').toggleClass('modal_open');
+
+    // var modCont = '<h3>'+proposta.titulo+'</h3>'+imgUrl+'<p>'+proposta.texto+'</p>';
+    jQuery('#lightbox_content').html(jQuery('#infoContainer').html());
+    isModal = true;
+    setTimeout(fixaCloseBT, 100);
+  }
+
   jQuery(document).mouseup(function (e){
       var container = jQuery(".modal_content");
       if (!container.is(e.target) // se o alvo não for o container
@@ -263,8 +289,8 @@ jQuery(document).ready(function() {
     source: new ol.source.BingMaps({key: 'AsOanmHkUY8fnofQzDZbdilguBznksMGkjFh0OqiY7mrzoMP7Nj_hUA6Vx5HP9-h', imagerySet: 'AerialWithLabels', culture: 'pt-BR'})
   })];
   /// DEFINE NOME DO MAPA
-  mapLayers[0].set("name","20")
-
+  mapLayers[0].set("name","20");
+  
   lStyle = new ol.style.Style({
               stroke: new ol.style.Stroke({
                 color: 'rgba(243,146,0,0.8)',
@@ -283,11 +309,12 @@ jQuery(document).ready(function() {
   var propsNumber = 0;
   for (codigo in information){
     propsNumber++;
-    kmlUrls.push(codigo.split('_')[1]+'.kml');
+    var splitCode = codigo.split('_')[1];
+    kmlUrls.push(splitCode+'.kml');
     if(propsNumber < 32) {
       var _prop = readProp(information, codigo);
-      var thumb = '<img src="../wp-content/themes/gestaourbana-1.2/uploads/'+codigo.split("_")[1]+'_thumb.png" alt="'+codigo+'" width="150" />';
-      var box = '<div>'+thumb+'<p>'+_prop.texto+'</p></div>';    
+      var thumb = '<img src="../wp-content/themes/gestaourbana-1.2/uploads/'+splitCode+'_thumb.png" onclick="enlargeThumb(\''+splitCode+'\')" alt="'+codigo+'" width="150" />';
+      var box = '<div>'+thumb+'<p>'+_prop.texto+'</p></div>';
       acoesIlustradas += box;
     }
   }
@@ -314,7 +341,7 @@ jQuery(document).ready(function() {
       case 2:
         pStrCol = 'rgba(60,90,131,0.95)';
         pWidth = 3;
-        pDash = [7,7];
+        pDash = [7,15];
         break;
       case 3:
         pStrCol = 'rgba(172,189,211,0.95)';
@@ -416,6 +443,8 @@ jQuery(document).ready(function() {
     view: view
   });
 
+  // arcoFeature = map.getLayers();
+  
   var featureOverlay = new ol.layer.Vector({
     source: new ol.source.Vector(),
     map: map,
@@ -434,18 +463,31 @@ jQuery(document).ready(function() {
   // featureOverlay.setZIndex(1);
 
   var highlight;
+  var lastFeature;
   var displayFeatureInfo = function (pixel) {
+    var fLayer = map.forEachLayerAtPixel(pixel, function(layer){
+      if(layer != featureOverlay){
+        return layer;
+      }
+    });
+    var layerName = fLayer.get('name');
     var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
-      if(feature !== highlight)
+      if(feature !== highlight && feature != lastFeature){
         return feature;
+      }
+      else
+        return null;
     });
     var info = document.getElementById('info');
-    if (feature !== highlight) {
+    if(feature == lastFeature || feature == highlight)
+      return;
+    if (feature !== lastFeature && feature.get('Layer') != "PERIMETRO_ACT_LF") {
       if (highlight) {
         featureOverlay.getSource().removeFeature(highlight);
       }
-      if (feature) {
+      if (feature) {        
         featureOverlay.getSource().addFeature(feature);
+        lastFeature = feature;
       }
       highlight = feature;      
     }    
@@ -462,13 +504,15 @@ jQuery(document).ready(function() {
     });
     if (feature) {      
       var layer = cLayer.get('name');
-      proposta = readProp(information, layer);      
-      // IMAGEM PADRÃO
-      // imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+layer.split('_')[1]+".png' onerror=\"this.src='"+defaultImg+"'\" alt='"+proposta.titulo+"' />";
-      imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+layer.split('_')[1]+".png' alt='"+proposta.titulo+"' />";
-      jQuery('#propostaTitulo').html(proposta.titulo);      
-      jQuery('#propostaImagem').html(imgUrl);
-      jQuery('#propostaTexto').html(proposta.texto);      
+      proposta = readProp(information, layer); 
+      if(proposta != undefined){
+        imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+layer.split('_')[1]+".png' alt='"+proposta.titulo+"' />";
+        jQuery('#propostaTitulo').html(proposta.titulo);      
+        jQuery('#propostaImagem').html(imgUrl);
+        jQuery('#propostaTexto').html(proposta.texto);      
+      }
+      else
+        return;
     } else {
       jQuery('#propostaTitulo').html('Clique no perímetro desejado para obter mais informações.');      
       jQuery('#propostaImagem').html('');
@@ -476,20 +520,21 @@ jQuery(document).ready(function() {
       jQuery('#propostaTexto').html('');
     }
   };
-  /*map.on('click', function (evt) {
+  map.on('click', function (evt) {
     getFeatureLayerInfo(evt.pixel);    
-  });*/
+    openModal();
+  });
   
   // MouseOver - bug por conta da sobreposição
-  // map.on('pointermove', function (evt) {
-  map.on('click', function (evt) {
+  map.on('pointermove', function (evt) {
+  // map.on('click', function (evt) {
     getFeatureLayerInfo(evt.pixel);
     if (evt.dragging) {
       return;
     }
     var pixel = map.getEventPixel(evt.originalEvent);
     displayFeatureInfo(pixel);
-    openModal();
+    // openModal();
   });
   
   var redeHidrica = '<h5>Rede Hídrica</h5>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'1\', this)">Recuperação de Córregos</button>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'2\', this)">Eixos Drenantes</button>'+'<button class="layerToggleBt unselectable" onclick="tLayers(\'3\', this)">Áreas de Absorção</button>';

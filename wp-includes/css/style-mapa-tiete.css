@@ -55,7 +55,7 @@ div#nonmapContainer {
 }
 
 #acoesIlustradas > div > p {
-	width: 300px;
+	width: 260px;
     display: inline-block;
     font-size: 12px;
     line-height: 1.5em;
@@ -66,6 +66,8 @@ div#nonmapContainer {
 #acoesIlustradas > div > img {
 	max-width: 100%;
 	vertical-align: inherit;
+	padding: 16px;
+	cursor: pointer;
 }
 
 #layersMenu {
