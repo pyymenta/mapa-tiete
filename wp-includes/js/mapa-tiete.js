@@ -183,6 +183,7 @@ var imgUrl;
 var mapLayers;
 var enlargeThumb;
 var arcoFeature;
+var kmlUrls;
 
 function readProp(obj, prop) {
     return obj[prop];
@@ -304,13 +305,14 @@ jQuery(document).ready(function() {
   perimetroMaior.set("name", "21"); 
   mapLayers.push(perimetroMaior);
 
-  var kmlUrls = [];
+  kmlUrls = [];
   /// CORREÇÃO PARA AUSÊNCIA DE INFORMAÇÃO
   var propsNumber = 0;
   for (codigo in information){
     propsNumber++;
     var splitCode = codigo.split('_')[1];
-    kmlUrls.push(splitCode+'.kml');
+    // ITERAÇÃO CANCELADA - ORDEM ESPECÍFICA DE CAMADAS
+    // kmlUrls.push(splitCode+'.kml');
     if(propsNumber < 32) {
       var _prop = readProp(information, codigo);
       var thumb = '<img src="../wp-content/themes/gestaourbana-1.2/uploads/'+splitCode+'_thumb.png" onclick="enlargeThumb(\''+splitCode+'\')" alt="'+codigo+'" width="150" />';
@@ -320,6 +322,47 @@ jQuery(document).ready(function() {
   }
   jQuery('#acoesIlustradas').html(acoesIlustradas);
   
+  kmlUrls = [
+  "9A.kml", 
+  "9B.kml", 
+  "9C.kml", 
+  "10A.kml", 
+  // "10B.kml", 
+  // "10C.kml", 
+  "11A.kml", 
+  "11B.kml", 
+  "11C.kml", 
+  "11D.kml", 
+  // "12A.kml", 
+  // "12B.kml", 
+  // "12C.kml", 
+  // "12D.kml", 
+  // "12E.kml", 
+  // "12F.kml", 
+  // "12G.kml",
+  "6A.kml", 
+  "6B.kml", 
+  "1A.kml",
+  "1B.kml",
+  "2A.kml", 
+  "2B.kml", 
+  "3A.kml", 
+  "3B.kml", 
+  "3C.kml", 
+  "4A.kml", 
+  "4B.kml", 
+  "5A.kml", 
+  "5B.kml", 
+  "5C.kml", 
+  "5D.kml", 
+  "5E.kml", 
+  "8A.kml", 
+  // "8B.kml", 
+  "7A.kml", 
+  "7B.kml", 
+  "7C.kml"
+  ];
+
   // for (var i = 0; i < kmlUrls.length; i++) {
   for (var i = kmlUrls.length-1; i >= 0; i--) {
     var nome = '_'+kmlUrls[i].split('.')[0];
@@ -479,18 +522,20 @@ jQuery(document).ready(function() {
         return null;
     });
     var info = document.getElementById('info');
-    if(feature == lastFeature || feature == highlight)
-      return;
-    if (feature !== lastFeature && feature.get('Layer') != "PERIMETRO_ACT_LF") {
-      if (highlight) {
-        featureOverlay.getSource().removeFeature(highlight);
-      }
-      if (feature) {        
-        featureOverlay.getSource().addFeature(feature);
-        lastFeature = feature;
-      }
-      highlight = feature;      
-    }    
+    if (feature) {
+      if(feature == lastFeature || feature == highlight)
+        return;
+      if (feature !== lastFeature && feature.get('Layer') != "PERIMETRO_ACT_LF") {
+        if (highlight) {
+          featureOverlay.getSource().removeFeature(highlight);
+        }
+        if (feature) {        
+          featureOverlay.getSource().addFeature(feature);
+          lastFeature = feature;
+        }
+        highlight = feature;      
+      }    
+    }
   };
   
   var getFeatureLayerInfo = function (pixel) {
