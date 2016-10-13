@@ -274,7 +274,6 @@ jQuery(document).ready(function() {
   var updateModal = function(layer) {
     if (layer.get('name') !== '21') {
       var layerName = layer.get('name');
-      console.log(layerName);
       proposta = readProp(information, layerName); 
       if(proposta != undefined){
         imgUrl = "<img src='../wp-content/themes/gestaourbana-1.2/uploads/"+layerName.split('_')[1]+".png' alt='"+proposta.titulo+"' />";
@@ -513,7 +512,7 @@ jQuery(document).ready(function() {
   for (kml in pointLayers12) {
     estilo = platMapAPI.getStyleLayerWIcon(uploadsDir+'icone-mapa_12.png', 0.5, 0.85);
     var kName = pointLayers12[kml]+'';
-    var nome = '_'+kName.split('_')[0];
+    var nome = '_'+kName.split('.')[0];
     var camada = platMapAPI.createCustomVectorLayerFromKML(uploadsDir+pointLayers12[kml], estilo);
     camada.set("name",nome);
 
@@ -552,7 +551,6 @@ jQuery(document).ready(function() {
   var selectPointerMove = new ol.interaction.Select({
     condition: ol.events.condition.pointerMove,
     layers: function(layer){
-      // getFeatureLayerInfo(evt.pixel);
       return layer.get('name') !== '21';
     },
     style: function(layer){
@@ -562,7 +560,6 @@ jQuery(document).ready(function() {
       else {
         iconFilename = 'icone-mapa_11.png';
       }
-      // console.log(layer.get('Layer'));
       var style = new ol.style.Style({
         image: new ol.style.Icon({
                anchor: [0.5, 0.5],
@@ -585,37 +582,18 @@ jQuery(document).ready(function() {
     }
   });
   
-  var selectClick = new ol.interaction.Select({
-    condition: ol.events.click,
-    layers: function(layer){
-      // console.log('Feature: '+feature+', Layer: '+layer)
-      return layer.get('name') !== '21';
-      /*if(layer != undefined) {
-        updateModal(feature, layer);
-        return layer.get('name') !== '21';
-      }*/
-    },
-    style: function(layer){
-      updateModal(layer);
-      openModal();
-      return null;
-    }
-  });
-  
   map.addInteraction(selectPointerMove);
-  // map.addInteraction(selectClick);
 
   var getFeatureLayerInfo = function (pixel) {
     cLayer = map.forEachLayerAtPixel(pixel, function (layer) {
-      /*if(layer != featureOverlay){
-        return layer;
-      } */
-      return layer;     
+      if(layer.get('name') != undefined){
+        return layer;             
+      }
     });
     var feature = map.forEachFeatureAtPixel(pixel, function(feature){
       return feature;
     });
-    if (feature && cLayer.get('name') !== '21') {      
+    if (feature && cLayer.get('name') !== '21' && cLayer.get('name') !== '_12A') {      
       var layer = cLayer.get('name');
       proposta = readProp(information, layer); 
       if(proposta != undefined){
@@ -626,7 +604,12 @@ jQuery(document).ready(function() {
       }
       else
         return;
-    } else {
+    } 
+    else if(cLayer.get('name') == '_12A'){
+      enlargeGifThumb('12A');
+      fechaModal();
+    }
+    else {
       jQuery('#propostaTitulo').html('Clique no perímetro desejado para obter mais informações.');      
       jQuery('#propostaImagem').html('');
       jQuery('#propostaTexto').html('');
@@ -641,10 +624,10 @@ jQuery(document).ready(function() {
   // MouseOver - bug por conta da sobreposição
   map.on('pointermove', function (evt) {
   // map.on('click', function (evt) {
-    getFeatureLayerInfo(evt.pixel);
     if (evt.dragging) {
       return;
     }
+    getFeatureLayerInfo(evt.pixel);
     // var pixel = map.getEventPixel(evt.originalEvent);
     // displayFeatureInfo(pixel);
     // openModal();
