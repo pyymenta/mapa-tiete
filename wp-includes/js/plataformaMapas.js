@@ -39,14 +39,14 @@
     * RECEBE: URL DO ÍCONE
     * RETORNA: ESTILO
     */
-    PlatMap.prototype.getStyleLayerWIcon = function(urlIcon){
+    PlatMap.prototype.getStyleLayerWIcon = function(urlIcon, myScale = 1, myOpacity = 1){
       var stylePointLayer;
       var iconStyle = new ol.style.Icon({
         anchor: [0.5, 0.5],
         anchorXUnits: 'fraction',
         anchorYUnits: 'fraction',
-        opacity: 0.95,
-        scale: 1,
+        opacity: myOpacity,
+        scale: myScale,
         src: urlIcon
       });
       stylePointLayer = new ol.style.Style({

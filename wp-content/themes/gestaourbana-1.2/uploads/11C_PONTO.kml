@@ -30,14 +30,6 @@
 	<ExtendedData><SchemaData schemaUrl="#11C_PONTO">
 		<SimpleData name="Layer">0</SimpleData>
 		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
-		<SimpleData name="EntityHandle">21D</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.694170761618189,-23.5102593019102,-6.797637926414609</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#11C_PONTO">
-		<SimpleData name="Layer">0</SimpleData>
-		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
 		<SimpleData name="EntityHandle">21E</SimpleData>
 	</SchemaData></ExtendedData>
       <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.698642977066839,-23.502748299495369,-6.801420689560473</coordinates></Point>
