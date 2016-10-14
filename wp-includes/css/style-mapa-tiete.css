@@ -70,6 +70,29 @@ div#nonmapContainer {
 	cursor: pointer;
 }
 
+#aius > div {
+	width: 940px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px 0px;
+}
+
+#aius > div > p {
+	width: 720px;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 1.5em;
+	margin: 0;
+	vertical-align: inherit;
+}
+
+#aius > div > img {
+	max-width: 100%;
+	vertical-align: inherit;
+	padding: 16px;
+	cursor: pointer;
+}
+
 #layersMenu {
 	width: 160px;
 	position: absolute;

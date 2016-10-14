@@ -282,6 +282,26 @@ jQuery(document).ready(function() {
     isModal = true;
     setTimeout(fixaCloseBT, 100);
   }
+
+  enlargeAiuThumb = function(code){
+    proposta = readProp(outrosPerimetros, code);
+    imgUrl = "<img src='"+uploadsDir+code+".jpg' alt='"+proposta.titulo+"' />";
+    jQuery('#propostaTitulo').html(proposta.titulo);      
+    jQuery('#propostaTexto').html(proposta.texto);
+    jQuery('#propostaImagem').html(imgUrl);
+    jQuery('#container_lightbox').css({
+        'opacity': '1',
+        'max-height': '100%',
+        'height': '100%',
+        'overflow': 'auto',
+    });
+    jQuery('body').toggleClass('modal_open');
+
+    // var modCont = '<h3>'+proposta.titulo+'</h3>'+imgUrl+'<p>'+proposta.texto+'</p>';
+    jQuery('#lightbox_content').html(jQuery('#infoContainer').html());
+    isModal = true;
+    setTimeout(fixaCloseBT, 100);
+  }
   
   ///  ATUALIZA INFORMAÇÕES DO MODAL
   var updateModal = function(layer) {
@@ -365,10 +385,20 @@ jQuery(document).ready(function() {
       width: 1
     })
   });
+  /// ÁREAS DE INTERVENÇÃO URBANA (APOS ACOES ILUSTRADAS)
+  var aiusThumbs = '';
   for(aiu in outrosPerimetros){
     var perimetro = platMapAPI.createCustomVectorLayerFromKML(uploadsDir+aiu+'.kml', aiuStyle);
     perimetro.set("name", aiu);    
     mapLayers.push(perimetro);
+
+    var _prop = readProp(outrosPerimetros, aiu);
+    console.log(_prop);
+    var thumb = '<img src="'+uploadsDir+aiu+'_thumb.png" onclick="enlargeAiuThumb(\''+aiu+'\')" alt="'+aiu+'" width="150" />';
+    var pTitle = _prop.titulo;
+    pTitle = pTitle.split('-')[1];
+    var box = '<div><h5>'+pTitle+'</h5>'+thumb+'<p>'+_prop.texto+'</p></div>';
+    aiusThumbs += box;
   }
 
   kmlUrls = [];
@@ -390,6 +420,7 @@ jQuery(document).ready(function() {
   var gif = '<div><img src="'+uploadsDir+'12A-thumb.gif" onclick="enlargeGifThumb(\'12A\')" alt="12A" /></div>';
   acoesIlustradas += gif;
   jQuery('#acoesIlustradas').html(acoesIlustradas);
+  jQuery('#aius').html(aiusThumbs);
   
   kmlUrls = [
   "9A.kml", 
