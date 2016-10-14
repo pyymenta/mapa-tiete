@@ -259,8 +259,8 @@
       }
     };
     /**
-*   VINCULA INFORMAÇÕES DO COMENTÁRIO
-*/
+    *   VINCULA INFORMAÇÕES DO COMENTÁRIO
+    */
     PlatMap.prototype.bindValuesComments = function (dataComment,apoio){
     var comments = "";
     for(var i = 0;i<dataComment.length;i++){
