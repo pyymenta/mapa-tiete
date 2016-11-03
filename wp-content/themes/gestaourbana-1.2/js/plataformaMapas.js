@@ -312,7 +312,7 @@
         return comments;
     }
     platMapAPI = new PlatMap();
-}($,ol));
+}(!$?jQuery:$,ol));
 
 //validações
 (function($){
@@ -336,4 +336,4 @@
     }); 
     });
     
-}(jQuery));
+}(!$?jQuery:$));
